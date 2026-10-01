@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AMR, Cobot and Smart-Factory Lab · Ahmad Mohammad</title>
+<meta name="description" content="Hands-on tests with the machines of a modern factory: a mobile robot that carries parts, two cobot arms that assemble and check them, a smart conveyor line and an AR training guide.">
+<meta name="author" content="Ahmad Mohammad">
+<meta property="og:title" content="AMR, Cobot and Smart-Factory Lab · Ahmad Mohammad">
+<meta property="og:description" content="Hands-on tests with the machines of a modern factory: a mobile robot that carries parts, two cobot arms that assemble and check them, a smart conveyor line and an AR training guide.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="mark" href="../index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 22h30M21 22v9" stroke="currentColor" stroke-width="1.5"/><text x="4" y="17" font-family="Inconsolata, monospace" font-weight="700" font-size="12.5" fill="currentColor">AM</text></svg><span>Ahmad Mohammad</span></a>
+  <nav class="topnav" aria-label="Main">
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#skills">Skills</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../cv.pdf">CV (PDF)</a>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch colour theme">Dark</button>
+  </nav>
+</header>
+<main id="main" class="sheet">
+<div class="zones zones-top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="zones zones-side" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+
+<div class="crumbs"><a href="../index.html#work">&larr; All work</a><span>Sheet 05 of 08</span></div>
+<header class="p-head">
+  <div>
+    <p class="eyebrow">Course 62112 Industry 4.0 in Practice &middot; DTU &middot; team of 5</p>
+    <h1>AMR, Cobot and Smart-Factory Lab</h1>
+    <p class="lead">Hands-on tests with the machines of a modern factory: a mobile robot that carries parts, two cobot arms that assemble and check them, a smart conveyor line and an AR training guide.</p>
+  </div>
+  <dl class="spec"><div><dt>Context</dt><dd>Course 62112, DTU</dd></div><div><dt>Team</dt><dd>5 people</dd></div><div><dt>My role</dt><dd>MiR missions, force-based QC, vision basics</dd></div><div><dt>Tools</dt><dd>MiR100, UR10, OnRobot Eyes, Festo MPS 403, HoloLens 2, Blender</dd></div></dl>
+</header>
+
+<dl class="numbers"><div><dt>5 min 35 s</dt><dd>full cobot + AMR cycle</dd></div><div><dt>21.2 s</dt><dd>average conveyor cycle (run 1)</dd></div><div><dt>6 min 45 s</dt><dd>AR guide, outside tester</dd></div></dl>
+
+<section class="section">
+  <h2 class="label">What we did</h2>
+  <div class="split">
+    <div class="prose">
+      <ul><li><b>Mobile robot (MiR100).</b> Cleaned up the scanned factory map, defined zones, and scripted missions with try/catch loops so the robot recovers from blocked routes, plus automatic docking for charging.</li><li><b>Cobot cell (two UR10s).</b> The robots mount lids on tubs and check them by force: lift the lid a few centimetres, wait a second, and read the force. A tub that lifts with the lid passes; otherwise the lid is pressed on once more, and rejected if it still fails. The full cycle, including the MiR transport, took 5&nbsp;min 35&nbsp;s at deliberately low speeds for safe debugging.</li><li><b>Machine vision.</b> Colour and shape detection with OnRobot Eyes to pick parts from varying pallet positions.</li><li><b>Smart conveyor (Festo MPS 403).</b> RFID-tagged boxes, colour sorting, lids. We logged every step's timestamps and processed them in Excel/VBA: 21.2 and 22.3&nbsp;s average cycle in two runs.</li><li><b>AR guide (HoloLens 2).</b> A Dynamics 365 Guides workflow with a 3D-scanned part and a robot arm animated in Blender. An outside tester finished it in about 6&nbsp;min 45&nbsp;s without help.</li><li><b>3D printing.</b> Printed gripper fingers on a Prusa MK4 and compared FDM, SLA and SLS.</li></ul>
+    </div>
+    <figure class="plate"><a class="img" href="../assets/img/i40/ur10-cell.webp" aria-label="Open full-size image: UR10 robot arm above an orange tray with coloured blocks."><img src="../assets/img/i40/ur10-cell.webp" width="727" height="764" alt="UR10 robot arm above an orange tray with coloured blocks." loading="lazy" decoding="async"></a><figcaption><b>FIG. 01</b> UR10 vision pick cell. <span class="who">Team</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">My part</h2>
+  <div class="mypart">
+    <span class="eyebrow">What I did in the five-person group</span>
+    <ul><li>Built the MiR100 zone definitions and the mission structures with error handling.</li><li>Set up the cobot quality-control step using force measurement.</li><li>Worked through the machine-vision fundamentals: camera placement, what affects detection, and its role in Industry 4.0.</li></ul>
+  </div>
+  <div class="plates" style="margin-top:28px">
+    <figure class="plate white"><a class="img" href="../assets/img/i40/mir-map-raw.webp" aria-label="Open full-size image: Raw scanned floor map with noise."><img src="../assets/img/i40/mir-map-raw.webp" width="356" height="474" alt="Raw scanned floor map with noise." loading="lazy" decoding="async"></a><figcaption><b>FIG. 02</b> MiR map before cleaning. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/i40/mir-zones.webp" aria-label="Open full-size image: Cleaned floor map with coloured zones."><img src="../assets/img/i40/mir-zones.webp" width="355" height="470" alt="Cleaned floor map with coloured zones." loading="lazy" decoding="async"></a><figcaption><b>FIG. 03</b> Cleaned map with zones. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/i40/qc-flowchart.webp" aria-label="Open full-size image: Flowchart of the force-based quality check with retry and reject paths."><img src="../assets/img/i40/qc-flowchart.webp" srcset="../assets/img/i40/qc-flowchart-sm.webp 720w, ../assets/img/i40/qc-flowchart.webp 1039w" sizes="(max-width: 700px) 100vw, 360px" width="1039" height="510" alt="Flowchart of the force-based quality check with retry and reject paths." loading="lazy" decoding="async"></a><figcaption><b>FIG. 04</b> Force-based quality check: pass, retry once, or reject. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/i40/gripper-finger.webp" aria-label="Open full-size image: Hand holding a small grey 3D-printed gripper finger."><img src="../assets/img/i40/gripper-finger.webp" width="531" height="399" alt="Hand holding a small grey 3D-printed gripper finger." loading="lazy" decoding="async"></a><figcaption><b>FIG. 05</b> Printed gripper finger. <span class="who">Team</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/i40/scan.webp" aria-label="Open full-size image: 3D scan of a hexagonal part shown in software."><img src="../assets/img/i40/scan.webp" width="416" height="337" alt="3D scan of a hexagonal part shown in software." loading="lazy" decoding="async"></a><figcaption><b>FIG. 06</b> 3D scan used in the AR guide. <span class="who">Team</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/i40/blender.webp" aria-label="Open full-size image: Blender window with an animated robot arm model."><img src="../assets/img/i40/blender.webp" srcset="../assets/img/i40/blender-sm.webp 720w, ../assets/img/i40/blender.webp 831w" sizes="(max-width: 700px) 100vw, 360px" width="831" height="564" alt="Blender window with an animated robot arm model." loading="lazy" decoding="async"></a><figcaption><b>FIG. 07</b> Robot arm animated in Blender for the HoloLens guide. <span class="who">Team</span></figcaption></figure>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Other sheets"><a href="foosball-robot.html"><span>&larr; Sheet 04</span>Foosball robot</a><a class="next" href="firstrider.html"><span>Sheet 06 &rarr;</span>FirstRider trailer</a></nav>
+<footer class="titleblock" aria-label="Sheet information">
+  <div><span>Title</span><b>AMR, Cobot and Smart-Factory Lab</b></div>
+  <div><span>Drawn by</span><b>A. Mohammad</b></div>
+  <div><span>Sheet</span><b>05 of 08</b></div>
+  <div><span>Scale</span><b>NTS</b></div>
+  <div><span>Rev</span><b>A</b></div>
+</footer>
+
+</main>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

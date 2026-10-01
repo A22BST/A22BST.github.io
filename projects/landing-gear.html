@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terrain-Adaptive Landing Gear for a VTOL Drone · Ahmad Mohammad</title>
+<meta name="description" content="A drone that lands on a slope or on rocks ends up tilted. We built landing gear with three legs that extend until each foot touches the ground, so the drone settles level.">
+<meta name="author" content="Ahmad Mohammad">
+<meta property="og:title" content="Terrain-Adaptive Landing Gear for a VTOL Drone · Ahmad Mohammad">
+<meta property="og:description" content="A drone that lands on a slope or on rocks ends up tilted. We built landing gear with three legs that extend until each foot touches the ground, so the drone settles level.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="mark" href="../index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 22h30M21 22v9" stroke="currentColor" stroke-width="1.5"/><text x="4" y="17" font-family="Inconsolata, monospace" font-weight="700" font-size="12.5" fill="currentColor">AM</text></svg><span>Ahmad Mohammad</span></a>
+  <nav class="topnav" aria-label="Main">
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#skills">Skills</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../cv.pdf">CV (PDF)</a>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch colour theme">Dark</button>
+  </nav>
+</header>
+<main id="main" class="sheet">
+<div class="zones zones-top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="zones zones-side" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+
+<div class="crumbs"><a href="../index.html#work">&larr; All work</a><span>Sheet 01 of 08</span></div>
+<header class="p-head">
+  <div>
+    <p class="eyebrow">Bachelor thesis &middot; DTU &middot; team of 2</p>
+    <h1>Terrain-Adaptive Landing Gear for a VTOL Drone</h1>
+    <p class="lead">A drone that lands on a slope or on rocks ends up tilted. We built landing gear with three legs that extend until each foot touches the ground, so the drone settles level.</p>
+  </div>
+  <dl class="spec"><div><dt>Context</dt><dd>Bachelor thesis, DTU</dd></div><div><dt>Team</dt><dd>2 people</dd></div><div><dt>My role</dt><dd>Mechatronics &amp; system integration</dd></div><div><dt>Tools</dt><dd>ESP32, KiCad, PX4, Gazebo, MAVLink, Python</dd></div></dl>
+</header>
+<figure class="plate hero-plate white"><div class="img"><img src="../assets/img/thesis/x650-hero.webp" srcset="../assets/img/thesis/x650-hero-sm.webp 720w, ../assets/img/thesis/x650-hero.webp 1122w" sizes="100vw" width="1122" height="1028" alt="Holybro X650 quadcopter standing on three white and black telescopic landing legs." fetchpriority="high" decoding="async"></div><figcaption><b>FIG. 01</b> The X650 on the three adaptive legs.</figcaption></figure>
+<dl class="numbers"><div><dt>200 mm</dt><dd>stroke per leg</dd></div><div><dt>4.17 s</dt><dd>measured full deployment</dd></div><div><dt>2.1&ndash;2.9&deg;</dt><dd>settled tilt on the built aircraft, five terrains</dd></div><div><dt>0.25&ndash;1.24&deg;</dt><dd>simulated tilt vs 6.5&ndash;10.5&deg; for rigid legs</dd></div></dl>
+
+<section class="section">
+  <h2 class="label">The problem</h2>
+  <div class="split">
+    <div class="prose">
+      <p>Multirotor drones need flat ground. On a slope or on rocks the body ends up tilted, and the next take-off is risky because the thrust points along the tilted body, not straight up. Rigid landing legs pass every bump in the terrain straight into the airframe.</p>
+      <p>The question we set ourselves: can the remaining body tilt after landing be brought below 5&deg; on slopes up to 30&deg; and height differences up to 200&nbsp;mm, compared with rigid legs on the same Holybro X650?</p>
+    </div>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/problem-tipover.webp" aria-label="Open full-size image: Diagram of a drone with rigid legs landing on a slope and tipping as its centre of gravity moves to the edge of the support polygon."><img src="../assets/img/thesis/problem-tipover.webp" srcset="../assets/img/thesis/problem-tipover-sm.webp 720w, ../assets/img/thesis/problem-tipover.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="900" alt="Diagram of a drone with rigid legs landing on a slope and tipping as its centre of gravity moves to the edge of the support polygon." loading="lazy" decoding="async"></a><figcaption><b>FIG. 02</b> On a slope the centre of gravity moves toward the edge of the support polygon.</figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">What we built</h2>
+  <div class="prose">
+    <p>We benchmarked four families of existing mechanisms (linkages, linear extension, articulated legs and thrust-assisted designs) and picked linear extension in a weighted concept selection. The final gear has three legs at 0&deg;, 120&deg; and 240&deg;.</p>
+    <ul><li>Each leg is a three-stage telescope. One geared DC motor turns three nested 3D-printed screws, 6 + 6 + 6 = 18&nbsp;mm of travel per motor turn, about 48&nbsp;mm/s.</li><li>A ball-jointed foot carries a contact switch and a compliance spring. When the foot touches the ground the switch stops that leg. No target length is computed: each foot decides its own final length.</li><li>A VL53L5CX multizone time-of-flight sensor looks at the ground and decides whether the legs need to deploy at all.</li><li>Two ESP32 microcontrollers on a CNC-milled carrier board, TB6612 motor drivers and encoders run the legs. The gear talks to the Pixhawk 6C flight controller over MAVLink.</li><li>As installed the gear weighs 1.904&nbsp;kg; the whole aircraft 4.454&nbsp;kg, 70.7&nbsp;% of the X650's 6.3&nbsp;kg take-off limit.</li></ul>
+  </div>
+  <div class="plates" style="margin-top:28px">
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/mechanism-families.webp" aria-label="Open full-size image: Four line drawings of landing-gear mechanism families: sweep linkage, linear stroke, articulated reach and thrust-assisted clearance."><img src="../assets/img/thesis/mechanism-families.webp" srcset="../assets/img/thesis/mechanism-families-sm.webp 720w, ../assets/img/thesis/mechanism-families.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="900" alt="Four line drawings of landing-gear mechanism families: sweep linkage, linear stroke, articulated reach and thrust-assisted clearance." loading="lazy" decoding="async"></a><figcaption><b>FIG. 03</b> Four mechanism families from the benchmark; linear extension was selected. <span class="who">Mechanism research: my work</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/concentric-screws.webp" aria-label="Open full-size image: Labelled cutaway of the leg showing three concentric drive screws turned by one motor."><img src="../assets/img/thesis/concentric-screws.webp" srcset="../assets/img/thesis/concentric-screws-sm.webp 720w, ../assets/img/thesis/concentric-screws.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="900" alt="Labelled cutaway of the leg showing three concentric drive screws turned by one motor." loading="lazy" decoding="async"></a><figcaption><b>FIG. 04</b> Three concentric screws, one motor. The telescopic stages extend together.</figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/leg-cutaway.webp" aria-label="Open full-size image: Coloured CAD section of one leg with airframe mount, drive screws, telescopic sleeves, ball joint and foot pad."><img src="../assets/img/thesis/leg-cutaway.webp" srcset="../assets/img/thesis/leg-cutaway-sm.webp 720w, ../assets/img/thesis/leg-cutaway.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="752" alt="Coloured CAD section of one leg with airframe mount, drive screws, telescopic sleeves, ball joint and foot pad." loading="lazy" decoding="async"></a><figcaption><b>FIG. 05</b> Section of one leg. <span class="who">Team CAD (partner)</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/leg-stages-photo.webp" aria-label="Open full-size image: Photo of a printed black telescopic leg with its three stages labelled."><img src="../assets/img/thesis/leg-stages-photo.webp" srcset="../assets/img/thesis/leg-stages-photo-sm.webp 720w, ../assets/img/thesis/leg-stages-photo.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="752" alt="Photo of a printed black telescopic leg with its three stages labelled." loading="lazy" decoding="async"></a><figcaption><b>FIG. 06</b> Printed leg with the three stages extended. <span class="who">Team build</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/thesis/printed-screw-parts.webp" aria-label="Open full-size image: Photo of 3D-printed screw and nut parts from an early iteration lying on a table."><img src="../assets/img/thesis/printed-screw-parts.webp" srcset="../assets/img/thesis/printed-screw-parts-sm.webp 720w, ../assets/img/thesis/printed-screw-parts.webp 1200w" sizes="(max-width: 700px) 100vw, 360px" width="1200" height="1600" alt="Photo of 3D-printed screw and nut parts from an early iteration lying on a table." loading="lazy" decoding="async"></a><figcaption><b>FIG. 07</b> Printed screw parts from the iterations. <span class="who">Team build</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/thesis/legs-on-plate.webp" aria-label="Open full-size image: Photo of three white and black legs mounted under a carbon-fibre plate with wiring."><img src="../assets/img/thesis/legs-on-plate.webp" width="536" height="715" alt="Photo of three white and black legs mounted under a carbon-fibre plate with wiring." loading="lazy" decoding="async"></a><figcaption><b>FIG. 08</b> Three legs on the mounting plate before fitting to the drone. <span class="who">Team build</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">My part</h2>
+  <div class="mypart">
+    <span class="eyebrow">What I did in this two-person project</span>
+    <p>I owned the mechatronics and system integration: making the mechanical, electrical and software sides work as one system.</p>
+    <ul><li>Built and wired the electronics from the ground up: the motors and sensors that let each leg sense the ground and move on its own.</li><li>Wrote the ESP32 firmware that runs the legs in real time, split into leg control and sensing/communication.</li><li>Designed the custom controller board in KiCad (CNC-milled) that brings sensors, motor drivers and controllers together.</li><li>Built a PX4/Gazebo software-in-the-loop simulation of the whole drone to compare adaptive and rigid landings on slopes and rough ground, before physical tests.</li><li>Researched existing mechanisms in books and other sources, which fed the concept choice.</li></ul>
+    <p class="note">My project partner did the leg CAD, the 3D-print iterations of the leg and the structural FEA. Those are team results on this page, not mine.</p>
+  </div>
+  <div class="plates" style="margin-top:28px">
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/architecture.webp" aria-label="Open full-size image: Block diagram: terrain, central time-of-flight sensor, deploy decision, controller and three legs each with motor, encoder, contact switch and home switch."><img src="../assets/img/thesis/architecture.webp" srcset="../assets/img/thesis/architecture-sm.webp 720w, ../assets/img/thesis/architecture.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="752" alt="Block diagram: terrain, central time-of-flight sensor, deploy decision, controller and three legs each with motor, encoder, contact switch and home switch." loading="lazy" decoding="async"></a><figcaption><b>FIG. 09</b> System architecture. The ToF sensor decides whether to deploy; each foot decides its own length. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/contact-stop-logic.webp" aria-label="Open full-size image: Flowchart: deploy command, drive motor, encoder monitors motion, contact switch closed leads to stop and hold, stroke limit reached leads to a fault."><img src="../assets/img/thesis/contact-stop-logic.webp" srcset="../assets/img/thesis/contact-stop-logic-sm.webp 720w, ../assets/img/thesis/contact-stop-logic.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="752" alt="Flowchart: deploy command, drive motor, encoder monitors motion, contact switch closed leads to stop and hold, stroke limit reached leads to a fault." loading="lazy" decoding="async"></a><figcaption><b>FIG. 10</b> Leg logic: stop on contact, declare a fault if the stroke limit comes first. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/electronics-diagram.webp" aria-label="Open full-size image: Wiring block diagram of the landing-gear electronics: supply, two ESP32 boards, ToF sensor, motor drivers and three legs."><img src="../assets/img/thesis/electronics-diagram.webp" srcset="../assets/img/thesis/electronics-diagram-sm.webp 720w, ../assets/img/thesis/electronics-diagram.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="752" alt="Wiring block diagram of the landing-gear electronics: supply, two ESP32 boards, ToF sensor, motor drivers and three legs." loading="lazy" decoding="async"></a><figcaption><b>FIG. 11</b> Electronics as built: two ESP32s, motor drivers, ToF sensor and leg feedback. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/carrier-pcb.webp" aria-label="Open full-size image: KiCad 3D render of a green carrier board with headers for two ESP32 modules and connectors."><img src="../assets/img/thesis/carrier-pcb.webp" srcset="../assets/img/thesis/carrier-pcb-sm.webp 720w, ../assets/img/thesis/carrier-pcb.webp 1568w" sizes="(max-width: 700px) 100vw, 360px" width="1568" height="984" alt="KiCad 3D render of a green carrier board with headers for two ESP32 modules and connectors." loading="lazy" decoding="async"></a><figcaption><b>FIG. 12</b> The carrier board as designed in KiCad and CNC-milled. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/thesis/tof-live.webp" aria-label="Open full-size image: Laptop screen showing a live 8 by 8 depth heatmap and signal plots from the time-of-flight sensor."><img src="../assets/img/thesis/tof-live.webp" srcset="../assets/img/thesis/tof-live-sm.webp 720w, ../assets/img/thesis/tof-live.webp 1400w" sizes="(max-width: 700px) 100vw, 360px" width="1400" height="1050" alt="Laptop screen showing a live 8 by 8 depth heatmap and signal plots from the time-of-flight sensor." loading="lazy" decoding="async"></a><figcaption><b>FIG. 13</b> Live data from the 8&times;8 time-of-flight sensor during bench tests. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/flight-control-diagram.webp" aria-label="Open full-size image: Diagram of the flight-control setup: ground station, radios, Pixhawk 6C, PWM board, ESCs, motors and the gear interface."><img src="../assets/img/thesis/flight-control-diagram.webp" srcset="../assets/img/thesis/flight-control-diagram-sm.webp 720w, ../assets/img/thesis/flight-control-diagram.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="752" alt="Diagram of the flight-control setup: ground station, radios, Pixhawk 6C, PWM board, ESCs, motors and the gear interface." loading="lazy" decoding="async"></a><figcaption><b>FIG. 14</b> Flight control and where the landing gear connects. <span class="who mine">My work</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">Results</h2>
+  <div class="split">
+    <div class="prose">
+      <p><b>Simulation.</b> In my PX4/Gazebo runs the adaptive gear settled at 0.25&ndash;1.24&deg; of tilt on uneven terrain, against 6.5&ndash;10.5&deg; for rigid legs on the same terrain (one run per terrain case).</p>
+      <p><b>Built aircraft.</b> On five terrain setups the legs settled the X650 at 2.1&ndash;2.9&deg;: flat ground 2.1&deg;, 100&nbsp;mm step 2.3&deg;, 23&deg; slope with a step 2.8&deg;, 30&deg; slope 2.6&deg;, and a 30&deg; slope with a 160&nbsp;mm block 2.9&deg;. These were driven by hand with the rotors unpowered and the drone on a safety line.</p>
+      <p><b>Deployment.</b> A full 200&nbsp;mm extension took 4.17&nbsp;s on the bench.</p>
+    </div>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/tilt-physical-chart.webp" aria-label="Open full-size image: Bar chart of measured residual tilt on five terrains, all between 2.1 and 2.9 degrees, under a 5 degree acceptance limit."><img src="../assets/img/thesis/tilt-physical-chart.webp" srcset="../assets/img/thesis/tilt-physical-chart-sm.webp 720w, ../assets/img/thesis/tilt-physical-chart.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="767" alt="Bar chart of measured residual tilt on five terrains, all between 2.1 and 2.9 degrees, under a 5 degree acceptance limit." loading="lazy" decoding="async"></a><figcaption><b>FIG. 15</b> Measured tilt on the built aircraft, five terrains. <span class="who">Team test</span></figcaption></figure>
+  </div>
+  <div class="plates" style="margin-top:28px">
+    <figure class="plate wide"><div class="img"><video controls muted loop playsinline preload="none" width="1280" height="407" poster="../assets/img/thesis/sim-poster.webp"><source src="../assets/video/adaptive-vs-rigid-sim.mp4" type="video/mp4"></video></div><figcaption><b>FIG. 16</b> Simulation, 20&deg; slope: adaptive legs (left) land level; rigid legs (right) end up tilted. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/tilt-sim-chart.webp" aria-label="Open full-size image: Horizontal bar chart comparing rigid and adaptive residual tilt on flat ground, slopes of 10, 15 and 20 degrees, two-step and blocks terrain."><img src="../assets/img/thesis/tilt-sim-chart.webp" srcset="../assets/img/thesis/tilt-sim-chart-sm.webp 720w, ../assets/img/thesis/tilt-sim-chart.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="752" alt="Horizontal bar chart comparing rigid and adaptive residual tilt on flat ground, slopes of 10, 15 and 20 degrees, two-step and blocks terrain." loading="lazy" decoding="async"></a><figcaption><b>FIG. 17</b> Simulated tilt, rigid (red) against adaptive (blue), one run per cell. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/thesis/sim-blocks.webp" aria-label="Open full-size image: Two simulation frames: the adaptive drone level on three blocks and the stock drone landed off target."><img src="../assets/img/thesis/sim-blocks.webp" srcset="../assets/img/thesis/sim-blocks-sm.webp 720w, ../assets/img/thesis/sim-blocks.webp 1600w" sizes="(max-width: 700px) 100vw, 360px" width="1600" height="525" alt="Two simulation frames: the adaptive drone level on three blocks and the stock drone landed off target." loading="lazy" decoding="async"></a><figcaption><b>FIG. 18</b> Simulation on three isolated blocks. <span class="who mine">My work</span></figcaption></figure>
+    <figure class="plate "><div class="img"><video controls muted loop playsinline preload="none" width="360" height="640" poster="../assets/img/thesis/leg-deployment-poster.webp"><source src="../assets/video/leg-deployment.mp4" type="video/mp4"></video></div><figcaption><b>FIG. 19</b> One leg on the bench: 0 to 200&nbsp;mm in 4.17&nbsp;s. <span class="who">Team test</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/thesis/terrain-block-photo.webp" aria-label="Open full-size image: Photo of the drone's three legs standing at different lengths on a slope with a block under one foot."><img src="../assets/img/thesis/terrain-block-photo.webp" srcset="../assets/img/thesis/terrain-block-photo-sm.webp 720w, ../assets/img/thesis/terrain-block-photo.webp 1200w" sizes="(max-width: 700px) 100vw, 360px" width="1200" height="1600" alt="Photo of the drone's three legs standing at different lengths on a slope with a block under one foot." loading="lazy" decoding="async"></a><figcaption><b>FIG. 20</b> 30&deg; slope with a block: each leg stopped at its own length. <span class="who">Team test</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/thesis/mounted-legs.webp" aria-label="Open full-size image: Photo of the X650 drone with the three adaptive legs mounted, standing in a lab."><img src="../assets/img/thesis/mounted-legs.webp" srcset="../assets/img/thesis/mounted-legs-sm.webp 720w, ../assets/img/thesis/mounted-legs.webp 1200w" sizes="(max-width: 700px) 100vw, 360px" width="1200" height="1600" alt="Photo of the X650 drone with the three adaptive legs mounted, standing in a lab." loading="lazy" decoding="async"></a><figcaption><b>FIG. 21</b> The legs mounted on the X650. <span class="who">Team build</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/thesis/hover-cobod-hall.webp" aria-label="Open full-size image: Photo of the X650 hovering low in a large hall."><img src="../assets/img/thesis/hover-cobod-hall.webp" width="720" height="1280" alt="Photo of the X650 hovering low in a large hall." loading="lazy" decoding="async"></a><figcaption><b>FIG. 22</b> First hover test of the X650, on rigid legs. The adaptive gear never flew. <span class="who">Team test</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="split">
+    <div class="limits">
+      <span class="eyebrow">Limits</span>
+      <ul><li>No flight test of the adaptive gear. Storage and calibration faults on the flight controller stopped the flight campaign; the drone only flew on rigid legs.</li><li>The physical tests were driven by hand with rotors off. No rigid-leg baseline was measured physically, so the rigid comparison exists in simulation only.</li><li>The gear came out at 1.904&nbsp;kg, above the 1.5&nbsp;kg target but inside the 2&nbsp;kg ceiling.</li><li>Simulation results are single runs per terrain case.</li></ul>
+    </div>
+    <div class="prose">
+      <h3 class="eyebrow">Lessons I took from it</h3>
+      <ul><li>The flight goal grew the scope and loaded one person. Freeze a testable revision before calibration and combined tests.</li><li>Design assemblies to be serviceable. Fit changes kept disturbing the wiring.</li><li>A powered controller board shorted against the conductive carbon-fibre frame. Insulation and mounting are part of the electronics design.</li></ul>
+      <h3 class="eyebrow" style="margin-top:8px">Proposed next steps</h3>
+      <ul><li>Automatic deployment triggered by the ToF sensor, then flight validation of the full system, then impact, side-load and buckling cases.</li><li>A CNC-cut carbon-fibre mounting plate to reduce bending.</li><li>A single-controller four-layer board with keyed connectors and current feedback to replace the hand-wired two-ESP32 carrier.</li></ul>
+      <figure class="plate white"><a class="img" href="../assets/img/thesis/proposed-pcb.webp" aria-label="Open full-size image: KiCad render of a proposed single-controller board with labelled connectors for three legs."><img src="../assets/img/thesis/proposed-pcb.webp" srcset="../assets/img/thesis/proposed-pcb-sm.webp 720w, ../assets/img/thesis/proposed-pcb.webp 1568w" sizes="(max-width: 700px) 100vw, 360px" width="1568" height="1488" alt="KiCad render of a proposed single-controller board with labelled connectors for three legs." loading="lazy" decoding="async"></a><figcaption><b>FIG. 23</b> Proposed four-layer board, design render only (not manufactured). <span class="who mine">My work</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Other sheets"><a href="../index.html"><span>&larr; Sheet 00</span>Index</a><a class="next" href="cobod.html"><span>Sheet 02 &rarr;</span>COBOD internship</a></nav>
+<footer class="titleblock" aria-label="Sheet information">
+  <div><span>Title</span><b>Terrain-Adaptive Landing Gear for a VTOL Drone</b></div>
+  <div><span>Drawn by</span><b>A. Mohammad</b></div>
+  <div><span>Sheet</span><b>01 of 08</b></div>
+  <div><span>Scale</span><b>NTS</b></div>
+  <div><span>Rev</span><b>A</b></div>
+</footer>
+
+</main>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

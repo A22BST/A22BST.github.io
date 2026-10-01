@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Compost Buddy: Smart Compost Unit · Ahmad Mohammad</title>
+<meta name="description" content="A compost bin for people in apartments that watches its own temperature, moisture and pH, stirs itself and adds water when needed.">
+<meta name="author" content="Ahmad Mohammad">
+<meta property="og:title" content="Compost Buddy: Smart Compost Unit · Ahmad Mohammad">
+<meta property="og:description" content="A compost bin for people in apartments that watches its own temperature, moisture and pH, stirs itself and adds water when needed.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="mark" href="../index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 22h30M21 22v9" stroke="currentColor" stroke-width="1.5"/><text x="4" y="17" font-family="Inconsolata, monospace" font-weight="700" font-size="12.5" fill="currentColor">AM</text></svg><span>Ahmad Mohammad</span></a>
+  <nav class="topnav" aria-label="Main">
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#skills">Skills</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../cv.pdf">CV (PDF)</a>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch colour theme">Dark</button>
+  </nav>
+</header>
+<main id="main" class="sheet">
+<div class="zones zones-top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="zones zones-side" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+
+<div class="crumbs"><a href="../index.html#work">&larr; All work</a><span>Sheet 03 of 08</span></div>
+<header class="p-head">
+  <div>
+    <p class="eyebrow">Course 41029 Design of Mechatronic Systems 2 &middot; DTU &middot; team of 8</p>
+    <h1>Compost Buddy: Smart Compost Unit</h1>
+    <p class="lead">A compost bin for people in apartments that watches its own temperature, moisture and pH, stirs itself and adds water when needed.</p>
+  </div>
+  <dl class="spec"><div><dt>Context</dt><dd>Course 41029, DTU</dd></div><div><dt>Team</dt><dd>8 people</dd></div><div><dt>My role</dt><dd>Electronics, mixing mechanism, water handling, CAD, BOM</dd></div><div><dt>Tools</dt><dd>ESP32, Arduino, Node-RED, MQTT, CAD</dd></div></dl>
+</header>
+
+<dl class="numbers"><div><dt>4 L</dt><dd>inner container</dd></div><div><dt>1.5 L</dt><dd>water tank</dd></div><div><dt>3</dt><dd>subsystems: stirring, sensor lift, watering</dd></div></dl>
+
+<section class="section">
+  <h2 class="label">What we built</h2>
+  <div class="split">
+    <div class="prose">
+      <p>Compost Buddy is a compact compost container for people in apartments. It measures the compost, stirs it, and adds water when needed; the user follows it on a dashboard.</p>
+      <ul><li>A 4&nbsp;L removable inner container and a 1.5&nbsp;L water tank.</li><li>A stirring arm on a geared 12&nbsp;V DC motor, driven through an L298N H-bridge. An INA219 current sensor detects when the motor stalls, and the arm reverses.</li><li>A scissor mechanism on a stepper motor (DRV8825 driver, endstops) lowers the soil sensor into the compost and lifts it clear before the arm turns.</li><li>The soil sensor reports temperature, moisture and pH over RS485. Water is added through a diaphragm pump on a transistor latch circuit.</li><li>An ESP32 publishes the readings over MQTT to a Node-RED dashboard that alerts the user when a value crosses a threshold.</li><li>Control rules from the literature: keep moisture around 40&ndash;60&nbsp;%, and add water if pH falls below 6.</li></ul>
+    </div>
+    <figure class="plate white"><a class="img" href="../assets/img/compost/render.webp" aria-label="Open full-size image: Render of a green cylindrical compost container with its lid lifted."><img src="../assets/img/compost/render.webp" srcset="../assets/img/compost/render-sm.webp 720w, ../assets/img/compost/render.webp 1144w" sizes="(max-width: 700px) 100vw, 360px" width="1144" height="972" alt="Render of a green cylindrical compost container with its lid lifted." loading="lazy" decoding="async"></a><figcaption><b>FIG. 01</b> Product render. <span class="who">Team</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">My part</h2>
+  <div class="mypart">
+    <span class="eyebrow">What I did in the team</span>
+    <p>We took the unit from design brief to a full systems-integration prototype in sprints, following the V-model.</p>
+    <ul><li>Electronics and sensor selection.</li><li>The motorised mixing mechanism, with its scissor and fixation hardware.</li><li>Water-level sensing and water handling.</li><li>The CAD model and the bill of materials.</li></ul>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">Results and limits</h2>
+  <div class="split">
+    <div class="prose">
+      <p>The beta prototype worked as a self-contained system that measures and turns compost. We tested it with sawdust and coffee grounds, not real compost.</p>
+      <p>On the way we lost a power supply and an Arduino, and had to work through communication problems between the components. A peristaltic pump would not work with our tubing, so we switched to a diaphragm pump. After the design review we made the inner container and stirring arm removable for cleaning. The final unit came out larger than planned because of the size of the mechanical parts.</p>
+    </div>
+    <div class="plates">
+      <figure class="plate"><a class="img" href="../assets/img/compost/beta-prototype.webp" aria-label="Open full-size image: Clear container with a stirring arm in a mix of sawdust and coffee grounds."><img src="../assets/img/compost/beta-prototype.webp" width="260" height="309" alt="Clear container with a stirring arm in a mix of sawdust and coffee grounds." loading="lazy" decoding="async"></a><figcaption><b>FIG. 02</b> Beta prototype test with sawdust and coffee grounds. <span class="who">Team</span></figcaption></figure>
+      <figure class="plate"><a class="img" href="../assets/img/compost/scissor-mechanism.webp" aria-label="Open full-size image: Hand holding a black printed scissor mechanism with a sensor probe attached."><img src="../assets/img/compost/scissor-mechanism.webp" width="255" height="334" alt="Hand holding a black printed scissor mechanism with a sensor probe attached." loading="lazy" decoding="async"></a><figcaption><b>FIG. 03</b> Scissor mechanism carrying the soil sensor. <span class="who">Team</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="plates" style="margin-top:20px">
+    <figure class="plate"><a class="img" href="../assets/img/compost/motor-driver-test.webp" aria-label="Open full-size image: Bench test of a geared DC motor wired to a motor driver and an Arduino."><img src="../assets/img/compost/motor-driver-test.webp" width="378" height="223" alt="Bench test of a geared DC motor wired to a motor driver and an Arduino." loading="lazy" decoding="async"></a><figcaption><b>FIG. 04</b> Stirring-motor and H-bridge bench test. <span class="who">Team</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/compost/stepper-bench.webp" aria-label="Open full-size image: Stepper motor with a lead screw wired to a breadboard."><img src="../assets/img/compost/stepper-bench.webp" width="306" height="211" alt="Stepper motor with a lead screw wired to a breadboard." loading="lazy" decoding="async"></a><figcaption><b>FIG. 05</b> Stepper and endstop bench test. <span class="who">Team</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/compost/motor-schematic.webp" aria-label="Open full-size image: Schematic of the DC motor circuit with H-bridge, current sensor and Arduino."><img src="../assets/img/compost/motor-schematic.webp" width="568" height="472" alt="Schematic of the DC motor circuit with H-bridge, current sensor and Arduino." loading="lazy" decoding="async"></a><figcaption><b>FIG. 06</b> Stirring-motor circuit. <span class="who">Team</span></figcaption></figure>
+    <figure class="plate"><a class="img" href="../assets/img/compost/inner-container.webp" aria-label="Open full-size image: Blue printed inner container fitted inside the cardboard housing mock-up."><img src="../assets/img/compost/inner-container.webp" width="283" height="323" alt="Blue printed inner container fitted inside the cardboard housing mock-up." loading="lazy" decoding="async"></a><figcaption><b>FIG. 07</b> Inner container in the housing mock-up. <span class="who">Team</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/compost/node-red.webp" aria-label="Open full-size image: Node-RED flow with MQTT input, function nodes and dashboard outputs."><img src="../assets/img/compost/node-red.webp" srcset="../assets/img/compost/node-red-sm.webp 720w, ../assets/img/compost/node-red.webp 1004w" sizes="(max-width: 700px) 100vw, 360px" width="1004" height="207" alt="Node-RED flow with MQTT input, function nodes and dashboard outputs." loading="lazy" decoding="async"></a><figcaption><b>FIG. 08</b> Node-RED flow behind the dashboard. <span class="who">Team</span></figcaption></figure>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Other sheets"><a href="cobod.html"><span>&larr; Sheet 02</span>COBOD internship</a><a class="next" href="foosball-robot.html"><span>Sheet 04 &rarr;</span>Foosball robot</a></nav>
+<footer class="titleblock" aria-label="Sheet information">
+  <div><span>Title</span><b>Compost Buddy: Smart Compost Unit</b></div>
+  <div><span>Drawn by</span><b>A. Mohammad</b></div>
+  <div><span>Sheet</span><b>03 of 08</b></div>
+  <div><span>Scale</span><b>NTS</b></div>
+  <div><span>Rev</span><b>A</b></div>
+</footer>
+
+</main>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

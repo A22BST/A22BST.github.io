@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Foosball Goalkeeper Robot · Ahmad Mohammad</title>
+<meta name="description" content="A robot goalkeeper for table football. A camera above the table follows the ball, and stepper motors slide and swing the keeper to block shots.">
+<meta name="author" content="Ahmad Mohammad">
+<meta property="og:title" content="Foosball Goalkeeper Robot · Ahmad Mohammad">
+<meta property="og:description" content="A robot goalkeeper for table football. A camera above the table follows the ball, and stepper motors slide and swing the keeper to block shots.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="mark" href="../index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 22h30M21 22v9" stroke="currentColor" stroke-width="1.5"/><text x="4" y="17" font-family="Inconsolata, monospace" font-weight="700" font-size="12.5" fill="currentColor">AM</text></svg><span>Ahmad Mohammad</span></a>
+  <nav class="topnav" aria-label="Main">
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#skills">Skills</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../cv.pdf">CV (PDF)</a>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch colour theme">Dark</button>
+  </nav>
+</header>
+<main id="main" class="sheet">
+<div class="zones zones-top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="zones zones-side" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+
+<div class="crumbs"><a href="../index.html#work">&larr; All work</a><span>Sheet 04 of 08</span></div>
+<header class="p-head">
+  <div>
+    <p class="eyebrow">Course 62800 Intro to Mechatronics &amp; Robotics Systems &middot; DTU &middot; team of 2</p>
+    <h1>Foosball Goalkeeper Robot</h1>
+    <p class="lead">A robot goalkeeper for table football. A camera above the table follows the ball, and stepper motors slide and swing the keeper to block shots.</p>
+  </div>
+  <dl class="spec"><div><dt>Context</dt><dd>Course 62800, DTU</dd></div><div><dt>Team</dt><dd>2 people</dd></div><div><dt>My role</dt><dd>Requirements, speed tests, mechanical design &amp; CAD</dd></div><div><dt>Tools</dt><dd>Arduino, Nema 17, Python/OpenCV, CAD</dd></div></dl>
+</header>
+
+<dl class="numbers"><div><dt>1.06 m/s</dt><dd>median kick speed, 67&nbsp;% of a standard table</dd></div><div><dt>0.60 m/s</dt><dd>median sliding speed, 138&nbsp;% of a standard table</dd></div><div><dt>2</dt><dd>stepper axes: slide and kick</dd></div></dl>
+
+<section class="section">
+  <h2 class="label">What we built</h2>
+  <div class="split">
+    <div class="prose">
+      <ul><li>A custom table with a 39.7 &times; 53.2&nbsp;cm playing field, painted black to give the camera good contrast.</li><li>A camera on a mast of ten 3D-printed parts above the field. Python with OpenCV tracks the ball and the goalkeeper by colour, calibrated from pixel positions to keeper positions.</li><li>Two Nema 17 stepper motors controlled by an Arduino (AccelStepper): one slides the keeper on a 6&nbsp;mm timing belt hidden in the hollow side walls, the other swings it to kick. Endstops calibrate the travel.</li><li>An electronics bay under the field for the Arduino, the stepper drivers and the belt hardware.</li></ul>
+    </div>
+    <figure class="plate white"><a class="img" href="../assets/img/foosball/render.webp" aria-label="Open full-size image: CAD render of a black foosball box with a camera mast and handles."><img src="../assets/img/foosball/render.webp" width="709" height="884" alt="CAD render of a black foosball box with a camera mast and handles." loading="lazy" decoding="async"></a><figcaption><b>FIG. 01</b> CAD of the table with camera mast. <span class="who">My CAD</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">My part</h2>
+  <div class="mypart">
+    <span class="eyebrow">What I did in the two-person team</span>
+    <ul><li>Wrote the requirements specification.</li><li>Ran the proof-of-concept experiments on kick speed and sliding speed that validated the concept.</li><li>Did the mechanical design and CAD.</li><li>Worked on the Arduino and stepper control alongside my teammate.</li></ul>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">Results and limits</h2>
+  <div class="split">
+    <div class="prose">
+      <p>We filmed kicks and slides on a standard table and on our robot table and analysed the videos in LoggerPro.</p>
+      <ul><li>Kick speed (median): 1.06&nbsp;m/s for the robot against 1.58&nbsp;m/s on a standard table, about 67&nbsp;%.</li><li>Sliding speed (median): 0.60&nbsp;m/s for the robot against 0.43&nbsp;m/s on a standard table, about 138&nbsp;%.</li><li>Live tracking and control worked. Weak points we found: timing-belt tension, gear grip, the camera mast rotating, and poor access to the electronics bay.</li></ul>
+    </div>
+    <figure class="plate"><a class="img" href="../assets/img/foosball/tracking.webp" aria-label="Open full-size image: Overhead camera frame of the foosball table with tracked positions overlaid."><img src="../assets/img/foosball/tracking.webp" srcset="../assets/img/foosball/tracking-sm.webp 720w, ../assets/img/foosball/tracking.webp 900w" sizes="(max-width: 700px) 100vw, 360px" width="900" height="532" alt="Overhead camera frame of the foosball table with tracked positions overlaid." loading="lazy" decoding="async"></a><figcaption><b>FIG. 02</b> Overhead camera frame used for tracking and speed analysis. <span class="who">Team</span></figcaption></figure>
+  </div>
+  <div class="plates" style="margin-top:20px">
+    <figure class="plate white"><a class="img" href="../assets/img/foosball/exploded.webp" aria-label="Open full-size image: Exploded CAD view of the table housing, belt holders and goalkeeper parts."><img src="../assets/img/foosball/exploded.webp" srcset="../assets/img/foosball/exploded-sm.webp 720w, ../assets/img/foosball/exploded.webp 939w" sizes="(max-width: 700px) 100vw, 360px" width="939" height="873" alt="Exploded CAD view of the table housing, belt holders and goalkeeper parts." loading="lazy" decoding="async"></a><figcaption><b>FIG. 03</b> Exploded view of the table. <span class="who">My CAD</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/foosball/belt-drive.webp" aria-label="Open full-size image: CAD view inside the table showing the goalkeeper rod and the belt drive."><img src="../assets/img/foosball/belt-drive.webp" width="720" height="523" alt="CAD view inside the table showing the goalkeeper rod and the belt drive." loading="lazy" decoding="async"></a><figcaption><b>FIG. 04</b> Sliding drive on the timing belt. <span class="who">My CAD</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/foosball/kick-mechanism.webp" aria-label="Open full-size image: CAD close-up of the belt-driven kick mechanism on the goalkeeper rod."><img src="../assets/img/foosball/kick-mechanism.webp" srcset="../assets/img/foosball/kick-mechanism-sm.webp 720w, ../assets/img/foosball/kick-mechanism.webp 863w" sizes="(max-width: 700px) 100vw, 360px" width="863" height="823" alt="CAD close-up of the belt-driven kick mechanism on the goalkeeper rod." loading="lazy" decoding="async"></a><figcaption><b>FIG. 05</b> Kick mechanism, belt highlighted in blue. <span class="who">My CAD</span></figcaption></figure>
+    <figure class="plate white"><a class="img" href="../assets/img/foosball/wiring.webp" aria-label="Open full-size image: Wiring diagram of the Arduino with two stepper drivers and endstops."><img src="../assets/img/foosball/wiring.webp" width="488" height="358" alt="Wiring diagram of the Arduino with two stepper drivers and endstops." loading="lazy" decoding="async"></a><figcaption><b>FIG. 06</b> Stepper wiring. <span class="who">Team</span></figcaption></figure>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Other sheets"><a href="compost-buddy.html"><span>&larr; Sheet 03</span>Compost Buddy</a><a class="next" href="industry-4-0.html"><span>Sheet 05 &rarr;</span>Industry 4.0 lab</a></nav>
+<footer class="titleblock" aria-label="Sheet information">
+  <div><span>Title</span><b>Foosball Goalkeeper Robot</b></div>
+  <div><span>Drawn by</span><b>A. Mohammad</b></div>
+  <div><span>Sheet</span><b>04 of 08</b></div>
+  <div><span>Scale</span><b>NTS</b></div>
+  <div><span>Rev</span><b>A</b></div>
+</footer>
+
+</main>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

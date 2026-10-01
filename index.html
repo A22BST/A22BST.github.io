@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmad Mohammad · Mechatronics Engineer</title>
+<meta name="description" content="Portfolio of Ahmad Mohammad, mechatronics and mechanical engineer (BEng, DTU): drone landing gear, PLC monitoring, embedded systems and mechanical design.">
+<meta name="author" content="Ahmad Mohammad">
+<meta property="og:title" content="Ahmad Mohammad · Mechatronics Engineer">
+<meta property="og:description" content="Portfolio of Ahmad Mohammad, mechatronics and mechanical engineer (BEng, DTU): drone landing gear, PLC monitoring, embedded systems and mechanical design.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="mark" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 22h30M21 22v9" stroke="currentColor" stroke-width="1.5"/><text x="4" y="17" font-family="Inconsolata, monospace" font-weight="700" font-size="12.5" fill="currentColor">AM</text></svg><span>Ahmad Mohammad</span></a>
+  <nav class="topnav" aria-label="Main">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="cv.pdf">CV (PDF)</a>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch colour theme">Dark</button>
+  </nav>
+</header>
+<main id="main" class="sheet">
+<div class="zones zones-top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="zones zones-side" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+
+<section class="hero" aria-labelledby="name">
+  <div>
+    <p class="eyebrow">Mechatronics / Mechanical Engineering &middot; BEng, DTU</p>
+    <h1 id="name">Ahmad Mohammad</h1>
+    <p class="lead">I work on the whole physical system: mechanics, sensors, motors, electronics and the firmware that makes them one machine. I like finding a problem, working out a solution and getting it to run on real hardware.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">See the work</a>
+      <a class="btn" href="cv.pdf">Download CV (PDF)</a>
+    </div>
+    <p class="contact-line"><span id="email-text">ahmadm226@gmail.com</span><button class="copy" type="button" data-copy="ahmadm226@gmail.com" aria-controls="email-text">Copy email</button><a href="https://www.linkedin.com/in/ahmad-mohammad-ab4880295/" rel="noopener">LinkedIn</a><span>Copenhagen area, Denmark</span></p>
+  </div>
+  <figure class="plate white">
+    <div class="img"><img src="assets/img/thesis/x650-hero.webp" srcset="assets/img/thesis/x650-hero-sm.webp 720w, assets/img/thesis/x650-hero.webp 1122w" sizes="(max-width: 900px) 100vw, 520px" width="1122" height="1028" alt="Holybro X650 quadcopter standing on three white and black telescopic landing legs." fetchpriority="high" decoding="async"></div>
+    <figcaption><b>FIG. 01</b> Bachelor thesis: self-levelling landing gear on a Holybro X650.</figcaption>
+  </figure>
+</section>
+
+<section class="section" id="work">
+  <h2 class="label"><span class="num">01 &nbsp;</span>Featured &middot; Bachelor thesis</h2>
+  <div class="feature">
+    <div>
+      <p class="eyebrow">Bachelor thesis &middot; DTU &middot; team of 2</p>
+      <h2>Terrain-Adaptive Landing Gear for a VTOL Drone</h2>
+      <div class="prose">
+        <p>A drone that lands on a slope or on rocks ends up tilted. We built landing gear with three legs that extend until each foot touches the ground, so the drone settles level.</p>
+        <p>One small motor per leg turns three nested 3D-printed screws, and a time-of-flight sensor decides whether the legs need to deploy. I owned the mechatronics: electronics, ESP32 firmware, a custom KiCad board and a PX4/Gazebo simulation.</p>
+      </div>
+      <a class="btn" href="projects/landing-gear.html">Open sheet 01</a>
+    </div>
+    <div>
+      <figure class="plate">
+        <div class="img"><img src="assets/img/thesis/terrain-block-photo.webp" srcset="assets/img/thesis/terrain-block-photo-sm.webp 720w, assets/img/thesis/terrain-block-photo.webp 1200w" sizes="(max-width: 900px) 100vw, 560px" width="1200" height="1600" alt="The drone's three legs standing at different lengths on a slope with a block under one foot." loading="lazy" decoding="async"></div>
+        <figcaption><b>FIG. 02</b> 30&deg; slope with a 160&nbsp;mm block: each leg stopped at its own length.</figcaption>
+      </figure>
+      <p class="dim">200 mm stroke &middot; 4.17 s</p>
+    </div>
+  </div>
+  <dl class="numbers"><div><dt>200 mm</dt><dd>stroke per leg</dd></div><div><dt>4.17 s</dt><dd>measured full deployment</dd></div><div><dt>2.1&ndash;2.9&deg;</dt><dd>settled tilt on the built aircraft, five terrains</dd></div><div><dt>0.25&ndash;1.24&deg;</dt><dd>simulated tilt vs 6.5&ndash;10.5&deg; for rigid legs</dd></div></dl>
+</section>
+
+<section class="section" id="experience">
+  <h2 class="label"><span class="num">02 &nbsp;</span>Experience</h2>
+  <div class="rows">
+    <article class="row">
+      <p class="when">Sep 2025 &ndash; Jan 2026</p>
+      <div>
+        <h3>Mechatronics Engineer Intern</h3>
+        <p class="org">COBOD International A/S &middot; R&amp;D &middot; large 3D printers for concrete</p>
+        <ul><li>Built PLC-based pressure and flow monitoring for the printers' dosing line on an Omron NX102 with IO-Link and turbine flow sensors. My test protocol showed the pump under-delivering its nominal flow.</li><li>Developed an electronics-free, retrofittable cleaning concept for the printers' Z-axis racks, with supplier work, material choice, printed test parts and a Fusion 360 proof of concept.</li><li>Assembled printer control hardware, validated a new PCB, and helped coordinate the company's relocation.</li></ul>
+        <p class="more"><a href="projects/cobod.html">Sheet 02: the internship projects in detail</a></p>
+      </div>
+    </article>
+    <article class="row">
+      <p class="when">Jun 2025 &ndash; present</p>
+      <div>
+        <h3>Volunteer Member (Engineering)</h3>
+        <p class="org">Engineers Without Borders Denmark</p>
+        <ul><li>Early scoping and planning for rehabilitating water towers: requirements, constraints and risks, and an execution plan.</li></ul>
+      </div>
+    </article>
+    <article class="row">
+      <p class="when">Ongoing</p>
+      <div>
+        <h3>Team Lead (Volunteer)</h3>
+        <p class="org">A community-based association</p>
+        <ul><li>Responsible for the overview and delivery of activities such as sports, workshops and trips, and for finding out what the community needs.</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label"><span class="num">03 &nbsp;</span>Projects</h2>
+  <div class="cards">
+    <a class="card" href="projects/landing-gear.html">
+  <div class="thumb"><img src="assets/img/thesis/x650-hero.webp" srcset="assets/img/thesis/x650-hero-sm.webp 720w, assets/img/thesis/x650-hero.webp 1122w" sizes="(max-width: 700px) 100vw, 360px" width="1122" height="1028" alt="" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <div class="meta"><span>Sheet 01</span><span>Team of 2</span></div>
+    <p class="kind">Bachelor thesis</p>
+    <h3>Adaptive landing gear</h3>
+    <p>Three motorised telescopic legs that each stop on ground contact, so a drone settles level on slopes and rocks.</p>
+    <ul class="tags"><li>ESP32</li><li>KiCad</li><li>PX4 / Gazebo</li><li>System integration</li></ul>
+  </div>
+</a>
+    <a class="card" href="projects/cobod.html">
+  <div class="thumb drawn" aria-hidden="true"><svg class="diagram" viewBox="0 0 400 300"><rect class="box hl" x="40" y="60" width="150" height="70"/><text x="54" y="92">PLC + I/O</text><text class="sub" x="54" y="112">dosing line</text><rect class="box" x="220" y="60" width="140" height="70"/><text x="234" y="92">Sensors</text><text class="sub" x="234" y="112">pressure / flow</text><path class="wire" d="M190 95H220"/><rect class="box" x="40" y="170" width="320" height="70"/><text x="54" y="202">Z-axis rack cleaner</text><text class="sub" x="54" y="222">concept + CAD, no electronics</text></svg></div>
+  <div class="body">
+    <div class="meta"><span>Sheet 02</span><span>Own projects</span></div>
+    <p class="kind">Internship</p>
+    <h3>COBOD internship</h3>
+    <p>PLC-based pressure and flow monitoring for a dosing line, and an electronics-free cleaning concept for the printers' racks.</p>
+    <ul class="tags"><li>Omron PLC</li><li>IO-Link</li><li>EtherNet/IP</li><li>Fusion 360</li></ul>
+  </div>
+</a>
+<a class="card" href="projects/compost-buddy.html">
+  <div class="thumb"><img src="assets/img/compost/render.webp" srcset="assets/img/compost/render-sm.webp 720w, assets/img/compost/render.webp 1144w" sizes="(max-width: 700px) 100vw, 360px" width="1144" height="972" alt="" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <div class="meta"><span>Sheet 03</span><span>Team of 8</span></div>
+    <p class="kind">Academic</p>
+    <h3>Compost Buddy</h3>
+    <p>Compost bin that measures itself, stirs on demand and reports to a dashboard. I worked on the electronics, the mixing mechanism and water handling.</p>
+    <ul class="tags"><li>ESP32</li><li>Arduino</li><li>Node-RED</li><li>Mechanism design</li></ul>
+  </div>
+</a>
+<a class="card" href="projects/foosball-robot.html">
+  <div class="thumb"><img src="assets/img/foosball/render.webp" width="709" height="884" alt="" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <div class="meta"><span>Sheet 04</span><span>Team of 2</span></div>
+    <p class="kind">Academic</p>
+    <h3>Foosball robot</h3>
+    <p>Camera-tracked goalkeeper on stepper-driven timing belts. I wrote the requirements, ran the speed tests and did the mechanical design.</p>
+    <ul class="tags"><li>Arduino</li><li>Stepper control</li><li>OpenCV</li><li>SolidWorks</li></ul>
+  </div>
+</a>
+<a class="card" href="projects/industry-4-0.html">
+  <div class="thumb cover"><img src="assets/img/i40/ur10-cell.webp" width="727" height="764" alt="" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <div class="meta"><span>Sheet 05</span><span>Team of 5</span></div>
+    <p class="kind">Academic</p>
+    <h3>Industry 4.0 lab</h3>
+    <p>MiR100 missions with error handling, a UR10 cell that checks lids by force, a smart conveyor line and a HoloLens guide.</p>
+    <ul class="tags"><li>MiR100</li><li>UR10</li><li>Festo MPS</li><li>HoloLens 2</li></ul>
+  </div>
+</a>
+<a class="card" href="projects/firstrider.html">
+  <div class="thumb"><img src="assets/img/firstrider/render.webp" width="441" height="373" alt="" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <div class="meta"><span>Sheet 06</span><span>Team of 4</span></div>
+    <p class="kind">Academic</p>
+    <h3>FirstRider trailer</h3>
+    <p>A lightweight, modular bike-trailer stretcher with full CAD and assembly drawings for fabrication.</p>
+    <ul class="tags"><li>SolidWorks</li><li>Product development</li><li>Materials selection</li></ul>
+  </div>
+</a>
+<a class="card" href="projects/bistable-mechanism.html">
+  <div class="thumb cover"><img src="assets/img/bistable/parts.webp" width="411" height="234" alt="" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <div class="meta"><span>Sheet 07</span><span>Team of 6</span></div>
+    <p class="kind">Academic</p>
+    <h3>Bistable mechanism</h3>
+    <p>Push-and-twist compliant lock with two unloaded rest positions, kept just under PLA's yield stress.</p>
+    <ul class="tags"><li>Compliant mechanism</li><li>SolidWorks</li><li>3D printing</li></ul>
+  </div>
+</a>
+<a class="card" href="projects/angle-bracket.html">
+  <div class="thumb"><img src="assets/img/bracket/bracket.webp" srcset="assets/img/bracket/bracket-sm.webp 720w, assets/img/bracket/bracket.webp 780w" sizes="(max-width: 700px) 100vw, 360px" width="780" height="539" alt="" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <div class="meta"><span>Sheet 08</span><span>Team of 4</span></div>
+    <p class="kind">Academic</p>
+    <h3>Angle bracket</h3>
+    <p>Calibrated a press's force measurement against a proving ring, then compared calculated and measured punching, bending and spring-back.</p>
+    <ul class="tags"><li>Sheet metal</li><li>Calibration</li><li>Tooling</li></ul>
+  </div>
+</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label"><span class="num">04 &nbsp;</span>Parts list &middot; other work</h2>
+  <p class="note" style="margin:-8px 0 16px; max-width:70ch">Smaller course projects, listed the way a drawing lists its parts. Most were group work; the team column gives the group size.</p>
+  <div class="table-wrap">
+    <table class="parts">
+      <thead><tr><th scope="col">Item</th><th scope="col">Title</th><th scope="col">Discipline</th><th scope="col">Context</th><th scope="col">Team</th><th scope="col">Note</th></tr></thead>
+      <tbody><tr><td>01</td><td class="t">Pendulum on Moving Cart</td><td>Control</td><td class="s">Course 62677</td><td>3</td><td class="s">Modelled an inverted pendulum in Simulink and tuned a PID controller that kept the rod within &plusmn;2&deg; under step disturbances.</td></tr>
+<tr><td>02</td><td class="t">Deep-Drawing Process Analysis</td><td>Manufacturing</td><td class="s">Course 41787</td><td>Team</td><td class="s">Tensile and Nakajima tests on steel and aluminium to judge r-values and forming limits.</td></tr>
+<tr><td>03</td><td class="t">Drone Lift Measurement Rig</td><td>Test rig</td><td class="s">Course 62146</td><td>5</td><td class="s">Lever-arm thrust rig that mapped motor lift against electrical power to support propeller choice.</td></tr>
+<tr><td>04</td><td class="t">4-Stroke Engine Kinematics</td><td>Modelling</td><td class="s">Course 62146</td><td>5</td><td class="s">Piston position, velocity and acceleration by vector and trigonometric methods, checked numerically.</td></tr>
+<tr><td>05</td><td class="t">Elastic-Powered Jump Car</td><td>Modelling + build</td><td class="s">Course 62146</td><td>5</td><td class="s">Modelled launch force for a toy car launcher and compared measured and predicted jumps.</td></tr>
+<tr><td>06</td><td class="t">3-D Scanner Geometry</td><td>Kinematics</td><td class="s">Course 62798</td><td>4</td><td class="s">Homogeneous transformation matrices to check camera placement on a turntable scanner.</td></tr>
+<tr><td>07</td><td class="t">DTU Roadrunners PM Framework</td><td>Project management</td><td class="s">Course 63852</td><td>Team</td><td class="s">Stakeholder map, WBS, risk register and KPIs for the Shell Eco-marathon team; ISO 21500/21502 certificate.</td></tr>
+<tr><td>08</td><td class="t">Ballerup Bowling Redesign</td><td>Innovation</td><td class="s">Course 62990</td><td>6</td><td class="s">Reuse-focused renovation concept for a 630&nbsp;m&sup2; space, pitched to the real client.</td></tr>
+<tr><td>09</td><td class="t">Scorched Earth (MATLAB)</td><td>Simulation</td><td class="s">Course 62646</td><td>4</td><td class="s">Projectile game solving 2-D flight with ODE45 under wind and drag.</td></tr>
+<tr><td>10</td><td class="t">Engine Testing &amp; Thermodynamics</td><td>Energy</td><td class="s">Course 62604</td><td>Team</td><td class="s">Bench test of a spark-ignition generator: fuel use and efficiency against electrical load.</td></tr>
+<tr><td>11</td><td class="t">Portable People Counter</td><td>Embedded</td><td class="s">Personal</td><td>Solo</td><td class="s">ESP32 and OAK-D proof of concept fusing vision, time-of-flight and RF sensing. In progress.</td></tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section two-col" id="skills">
+  <div>
+    <h2 class="label"><span class="num">05 &nbsp;</span>Skills</h2>
+    <dl class="skills">
+      <dt>Embedded</dt><dd>ESP32, Arduino, KiCad PCB design, Node-RED, sensor integration (IO-Link, time-of-flight, encoders), motor drivers</dd>
+      <dt>Controls</dt><dd>Omron PLC (Sysmac Studio, structured text, ladder), IO-Link, EtherNet/IP, PI/PID control, Beckhoff TwinCAT 3 (course labs)</dd>
+      <dt>Robotics &amp; UAV</dt><dd>PX4/Pixhawk, MAVLink, Gazebo simulation, UR10, MiR100, Festo MPS</dd>
+      <dt>Mechanical</dt><dd>SolidWorks, Fusion 360, 3D-print prototyping, mechanism research, materials selection, sheet-metal forming</dd>
+      <dt>Programming</dt><dd>Python, MATLAB/Simulink, C++ (Arduino/ESP32)</dd>
+      <dt>Certificates</dt><dd>ISO 21500 &amp; ISO 21502 (project management), P-17 welding/thermal cutting</dd>
+      <dt>Languages</dt><dd>Danish (native), English, Arabic</dd>
+    </dl>
+  </div>
+  <div class="edu">
+    <h2 class="label">Education</h2>
+    <div class="block">
+      <h3>BEng Mechanical Engineering, Mechatronics &amp; Robotics</h3>
+      <p>Technical University of Denmark (DTU)</p>
+    </div>
+    <div class="block">
+      <h3>Looking for</h3>
+      <p>Mechatronics, robotics, R&amp;D, product development and system-integration roles in Copenhagen, Zealand or Malm&ouml;, where I work close to the physical system. Available immediately; driver's licence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2 class="label"><span class="num">06 &nbsp;</span>Contact</h2>
+  <div class="split">
+    <p class="lead">The quickest way to reach me is email. I'm happy to walk through any of these projects in more detail.</p>
+    <div class="contact-line" style="margin-top:0; font-size:1rem">
+      <span id="email-text-2">ahmadm226@gmail.com</span>
+      <button class="copy" type="button" data-copy="ahmadm226@gmail.com" aria-controls="email-text-2">Copy email</button>
+      <a href="mailto:ahmadm226@gmail.com">Write an email</a>
+      <a href="https://www.linkedin.com/in/ahmad-mohammad-ab4880295/" rel="noopener">LinkedIn</a>
+      <a href="cv.pdf">CV (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer class="titleblock" aria-label="Sheet information">
+  <div><span>Title</span><b>Portfolio &middot; Ahmad Mohammad</b></div>
+  <div><span>Drawn by</span><b>A. Mohammad</b></div>
+  <div><span>Sheet</span><b>00 of 08</b></div>
+  <div><span>Scale</span><b>NTS</b></div>
+  <div><span>Rev</span><b>A</b></div>
+</footer>
+
+</main>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

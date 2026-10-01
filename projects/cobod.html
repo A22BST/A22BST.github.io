@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mechatronics Internship at COBOD · Ahmad Mohammad</title>
+<meta name="description" content="COBOD builds large 3D printers for concrete buildings. In the R&D department I ran two projects largely on my own: inline pressure and flow monitoring for the dosing line, and a cleaning concept for the printers' vertical racks.">
+<meta name="author" content="Ahmad Mohammad">
+<meta property="og:title" content="Mechatronics Internship at COBOD · Ahmad Mohammad">
+<meta property="og:description" content="COBOD builds large 3D printers for concrete buildings. In the R&D department I ran two projects largely on my own: inline pressure and flow monitoring for the dosing line, and a cleaning concept for the printers' vertical racks.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="mark" href="../index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 22h30M21 22v9" stroke="currentColor" stroke-width="1.5"/><text x="4" y="17" font-family="Inconsolata, monospace" font-weight="700" font-size="12.5" fill="currentColor">AM</text></svg><span>Ahmad Mohammad</span></a>
+  <nav class="topnav" aria-label="Main">
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#skills">Skills</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../cv.pdf">CV (PDF)</a>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch colour theme">Dark</button>
+  </nav>
+</header>
+<main id="main" class="sheet">
+<div class="zones zones-top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="zones zones-side" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+
+<div class="crumbs"><a href="../index.html#work">&larr; All work</a><span>Sheet 02 of 08</span></div>
+<header class="p-head">
+  <div>
+    <p class="eyebrow">Internship &middot; COBOD International, R&amp;D &middot; Sep 2025 &ndash; Jan 2026</p>
+    <h1>Mechatronics Internship at COBOD</h1>
+    <p class="lead">COBOD builds large 3D printers for concrete buildings. In the R&amp;D department I ran two projects largely on my own: inline pressure and flow monitoring for the dosing line, and a cleaning concept for the printers' vertical racks.</p>
+  </div>
+  <dl class="spec"><div><dt>Company</dt><dd>COBOD International A/S</dd></div><div><dt>Dept.</dt><dd>R&amp;D</dd></div><div><dt>Period</dt><dd>Sep 2025 &ndash; Jan 2026</dd></div><div><dt>Tools</dt><dd>Omron NX102, Sysmac Studio, IO-Link, EtherNet/IP, Fusion 360</dd></div></dl>
+</header>
+
+
+
+<section class="section">
+  <h2 class="label">Pressure and flow monitoring for a dosing line</h2>
+  <div class="split">
+    <div class="prose">
+      <p class="lead">COBOD's printers add chemicals to the concrete through a dosing line. Dosing errors were only caught by eye after printing. I added inline pressure and flow measurement so the system can see what it is actually delivering.</p>
+      <ul><li>Gathered requirements from the dosing, mechatronics and department leads, and read the chemicals' safety data sheets to set the sensor material requirements.</li><li>Selected an IO-Link pressure sensor and a turbine flow sensor with a signal converter, and pitched the choice to the department head for budget approval.</li><li>Built it on an Omron NX102 PLC with a remote EtherNet/IP rack, programmed in Sysmac Studio (structured text, function blocks): a physics-based flow model, two independent flow measurements, sensor monitoring with fault detection and watchdog, and low-level interlocks.</li><li>Designed a systematic test protocol with measuring cylinders at several flow rates. It showed the pump delivering well below its nominal setting.</li></ul>
+    </div>
+    
+<figure class="plate"><div class="img">
+<svg class="diagram" viewBox="0 0 640 300" role="img" aria-labelledby="dz-t">
+  <title id="dz-t">Simplified diagram: a PLC with a remote I/O rack reads an IO-Link pressure sensor and a turbine flow sensor on the dosing line, and sets the pump speed.</title>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="arrow" d="M0 0L10 5L0 10z"/></marker></defs>
+  <rect class="box hl" x="20" y="24" width="170" height="64"/><text x="34" y="52">PLC (Omron NX102)</text><text class="sub" x="34" y="72">flow model, monitoring</text>
+  <rect class="box" x="250" y="24" width="160" height="64"/><text x="264" y="52">Remote I/O rack</text><text class="sub" x="264" y="72">EtherNet/IP</text>
+  <path class="wire" d="M190 56H248" marker-end="url(#ar)"/>
+  <rect class="box" x="20" y="200" width="120" height="56"/><text x="34" y="225">Pump</text><text class="sub" x="34" y="244">speed setpoint</text>
+  <rect class="box" x="200" y="200" width="150" height="56"/><text x="214" y="225">Pressure sensor</text><text class="sub" x="214" y="244">IO-Link</text>
+  <rect class="box" x="410" y="200" width="140" height="56"/><text x="424" y="225">Flow sensor</text><text class="sub" x="424" y="244">turbine</text>
+  <path class="wire" d="M140 228H198"/><path class="wire" d="M350 228H408"/><path class="wire" d="M550 228H610" marker-end="url(#ar)"/>
+  <text class="sub" x="566" y="216">to nozzle</text>
+  <path class="wire dash" d="M300 88V198"/><path class="wire dash" d="M380 88V150H480V198"/>
+  <path class="wire dash" d="M105 88V150H80V198" marker-end="url(#ar)"/>
+  <text class="sub" x="440" y="140">signals in</text><text class="sub" x="112" y="140">control out</text>
+</svg></div>
+<figcaption><b>FIG. 01</b> Simplified measurement chain, drawn for this page.</figcaption></figure>
+  </div>
+  <div class="split" style="margin-top:28px">
+    <div class="mypart">
+      <span class="eyebrow">Verified</span>
+      <p>Pressure sensing, EtherNet/IP communication, pump-speed control, the flow model and the dual flow measurement.</p>
+    </div>
+    <div class="limits">
+      <span class="eyebrow">Not validated</span>
+      <p>The PI pump-speed loop, auto-calibration and monitoring are coded but were not validated in operation, because of repeated pump hardware faults. I handed the project over with a detailed report so the work could continue.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">Cleaning concept for the Z-axis racks</h2>
+  <div class="prose">
+    <p class="lead">The printers climb vertical toothed racks. On outdoor sites sand and dust wear the racks out. I developed a cleaning system that can be retrofitted and needs no electronics: brushes driven by the printer's own motion clean the teeth in both directions of travel.</p>
+    <ul><li>Set the design requirements, including removal of most loose debris and cleaning in both directions.</li><li>Analysed a shared drive principle that takes its motion from the existing climbing gear.</li><li>Rejected early concepts and, working directly with a brush supplier, developed three viable brush concepts.</li><li>Chose the bristle material from supplier samples and data sheets, and switched to a cheaper brush when the custom sample cost too much.</li><li>3D-printed rack sections to check how the brush engages the teeth, and built a Fusion 360 CAD proof of concept.</li><li>Handed over at concept stage with a roadmap for the next steps.</li></ul>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="label">Other work during the internship</h2>
+  <div class="prose">
+    <ul><li>Assembled a complete printer control box and a Z cartridge.</li><li>Taught myself Omron PLC programming (Sysmac Studio, structured text and ladder) by building two games on COBOD's PLC training rig: Simon Says with random sequences up to 100 rounds, and a reaction-time game with random prompts and delays of 0.5&ndash;1.5&nbsp;s.</li><li>Tested a newly designed PCB for the printers' controller to check it fixed the previous version's overheating.</li><li>Helped coordinate the company's move from six sites in Nordhavn to new premises in Taastrup: inventory, packing, logistics and setting up the new facilities.</li></ul>
+    <p class="note">Evaluation from the Head of R&amp;D: motivation 5 of 5; knowledge, problem solving, learning new things, teamwork and meeting deadlines 4 of 5.</p>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Other sheets"><a href="landing-gear.html"><span>&larr; Sheet 01</span>Adaptive landing gear</a><a class="next" href="compost-buddy.html"><span>Sheet 03 &rarr;</span>Compost Buddy</a></nav>
+<footer class="titleblock" aria-label="Sheet information">
+  <div><span>Title</span><b>Mechatronics Internship at COBOD</b></div>
+  <div><span>Drawn by</span><b>A. Mohammad</b></div>
+  <div><span>Sheet</span><b>02 of 08</b></div>
+  <div><span>Scale</span><b>NTS</b></div>
+  <div><span>Rev</span><b>A</b></div>
+</footer>
+
+</main>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
