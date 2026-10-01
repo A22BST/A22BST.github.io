@@ -112,14 +112,12 @@
 
 <section class="section">
   <div class="split">
-    <div class="limits">
-      <span class="eyebrow">Limits</span>
-      <ul><li>No flight test of the adaptive gear. Storage and calibration faults on the flight controller stopped the flight campaign; the drone only flew on rigid legs.</li><li>The physical tests were driven by hand with rotors off. No rigid-leg baseline was measured physically, so the rigid comparison exists in simulation only.</li><li>The gear came out at 1.904&nbsp;kg, above the 1.5&nbsp;kg target but inside the 2&nbsp;kg ceiling.</li><li>Simulation results are single runs per terrain case.</li></ul>
-    </div>
     <div class="prose">
       <h3 class="eyebrow">Lessons I took from it</h3>
       <ul><li>The flight goal grew the scope and loaded one person. Freeze a testable revision before calibration and combined tests.</li><li>Design assemblies to be serviceable. Fit changes kept disturbing the wiring.</li><li>A powered controller board shorted against the conductive carbon-fibre frame. Insulation and mounting are part of the electronics design.</li></ul>
-      <h3 class="eyebrow" style="margin-top:8px">Proposed next steps</h3>
+    </div>
+    <div class="prose">
+      <h3 class="eyebrow">Proposed next steps</h3>
       <ul><li>Automatic deployment triggered by the ToF sensor, then flight validation of the full system, then impact, side-load and buckling cases.</li><li>A CNC-cut carbon-fibre mounting plate to reduce bending.</li><li>A single-controller four-layer board with keyed connectors and current feedback to replace the hand-wired two-ESP32 carrier.</li></ul>
       <figure class="plate white"><a class="img" href="../assets/img/thesis/proposed-pcb.webp" aria-label="Open full-size image: KiCad render of a proposed single-controller board with labelled connectors for three legs."><img src="../assets/img/thesis/proposed-pcb.webp" srcset="../assets/img/thesis/proposed-pcb-sm.webp 720w, ../assets/img/thesis/proposed-pcb.webp 1568w" sizes="(max-width: 700px) 100vw, 360px" width="1568" height="1488" alt="KiCad render of a proposed single-controller board with labelled connectors for three legs." loading="lazy" decoding="async"></a><figcaption><b>FIG. 23</b> Proposed four-layer board, design render only (not manufactured). <span class="who mine">My work</span></figcaption></figure>
     </div>
