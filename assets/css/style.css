@@ -306,3 +306,83 @@ table.parts { border-collapse: collapse; width: 100%; min-width: 680px; font-siz
 a.img { cursor: zoom-in; text-decoration: none; }
 a.img:hover img { outline: 1px solid var(--accent); outline-offset: 2px; }
 .card .thumb.drawn { background: var(--plate); }
+
+/* ---------- added content blocks ---------- */
+.hero .avail {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+  margin: -10px 0 24px;
+}
+.duo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.duo .plate img, .duo .plate video {
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain;
+}
+.sheet-contact {
+  margin-top: 48px;
+  padding: 16px 18px;
+  border: 1px solid var(--rule);
+  background: var(--plate);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  align-items: baseline;
+}
+.sheet-contact span.k {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+.sheet-contact + .pager { margin-top: 16px; }
+.da-summary { max-width: 70ch; }
+.da-summary p { color: var(--soft); margin: 0 0 10px; }
+
+@media (max-width: 640px) {
+  .duo .plate img, .duo .plate video { max-height: 300px; }
+  .table-wrap { border: 0; overflow: visible; }
+  table.parts { min-width: 0; }
+  table.parts, .parts tbody, .parts tr, .parts td { display: block; width: auto; }
+  .parts thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .parts tr { border: 1px solid var(--rule); padding: 10px 12px; margin-bottom: 10px; }
+  .parts td { border: 0; padding: 2px 0; white-space: normal !important; }
+  .parts td:first-child { width: auto; }
+  .parts td[data-label]::before {
+    content: attr(data-label) ": ";
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--faint);
+  }
+}
+
+/* Language switch beside the theme button. */
+.topnav .lang-switch {
+  font: inherit; font-size: 0.8rem;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--soft); background: transparent; border: 1px solid var(--rule);
+  padding: 3px 9px; cursor: pointer; border-radius: 2px; text-decoration: none;
+}
+.topnav .lang-switch:hover { color: var(--accent); border-color: var(--accent); }

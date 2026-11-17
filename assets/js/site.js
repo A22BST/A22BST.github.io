@@ -1,6 +1,7 @@
 // Theme toggle (remembers the choice) and copy-email buttons.
 (function () {
   var root = document.documentElement;
+  var danish = root.lang === 'da';
   var btn = document.querySelector('[data-theme-toggle]');
 
   function current() {
@@ -9,7 +10,7 @@
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
   function label() {
-    if (btn) btn.textContent = current() === 'dark' ? 'Light' : 'Dark';
+    if (btn) btn.textContent = current() === 'dark' ? (danish ? 'Lys' : 'Light') : (danish ? 'Mørk' : 'Dark');
   }
   if (btn) {
     label();
@@ -21,12 +22,12 @@
     });
   }
 
-  document.querySelectorAll('[data-copy]').forEach(function (b) {
+  Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'), function (b) {
     b.addEventListener('click', function () {
       var text = b.getAttribute('data-copy');
       var done = function () {
         var old = b.textContent;
-        b.textContent = 'Copied';
+        b.textContent = danish ? 'Kopieret' : 'Copied';
         setTimeout(function () { b.textContent = old; }, 1600);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -44,5 +45,12 @@
     var sel = window.getSelection();
     sel.removeAllRanges();
     sel.addRange(range);
+  }
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('video[autoplay]'), function (video) {
+      video.removeAttribute('autoplay');
+      video.pause();
+    });
   }
 })();

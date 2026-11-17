@@ -6,9 +6,20 @@
 <title>Ahmad Mohammad · Mechatronics Engineer</title>
 <meta name="description" content="Portfolio of Ahmad Mohammad, mechatronics and mechanical engineer (BEng, DTU): drone landing gear, PLC monitoring, embedded systems and mechanical design.">
 <meta name="author" content="Ahmad Mohammad">
+<link rel="canonical" href="https://a22bst.github.io/">
+<link rel="alternate" hreflang="en" href="https://a22bst.github.io/">
+<link rel="alternate" hreflang="da" href="https://a22bst.github.io/da/">
+<link rel="alternate" hreflang="x-default" href="https://a22bst.github.io/">
+<meta property="og:locale" content="en_GB">
 <meta property="og:title" content="Ahmad Mohammad · Mechatronics Engineer">
 <meta property="og:description" content="Portfolio of Ahmad Mohammad, mechatronics and mechanical engineer (BEng, DTU): drone landing gear, PLC monitoring, embedded systems and mechanical design.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://a22bst.github.io/">
+<meta property="og:image" content="https://a22bst.github.io/assets/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ahmad Mohammad, mechatronics engineer: a drone on three self-levelling landing legs.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +27,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Ahmad Mohammad", "jobTitle": "Mechatronics Engineer", "url": "https://a22bst.github.io/", "sameAs": ["https://www.linkedin.com/in/ahmad-mohammad-ab4880295/"], "alumniOf": {"@type": "CollegeOrUniversity", "name": "Technical University of Denmark (DTU)"}, "knowsAbout": ["Mechatronics", "Robotics", "Embedded systems", "PLC programming", "Mechanical design"], "address": {"@type": "PostalAddress", "addressRegion": "Copenhagen area", "addressCountry": "DK"}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -26,6 +38,7 @@
     <a href="index.html#experience">Experience</a>
     <a href="index.html#skills">Skills</a>
     <a href="index.html#contact">Contact</a>
+    <a class="lang-switch" href="da/index.html" hreflang="da" lang="da">DA</a>
     <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch colour theme">Dark</button>
   </nav>
 </header>
@@ -37,6 +50,7 @@
     <p class="eyebrow">Mechatronics / Mechanical Engineering &middot; BEng, DTU</p>
     <h1 id="name">Ahmad Mohammad</h1>
     <p class="lead">I work on the whole physical system: mechanics, sensors, motors, electronics and the firmware that makes them one machine. I like finding a problem, working out a solution and getting it to run on real hardware.</p>
+    <p class="avail">Open to roles in mechatronics, robotics, test and R&amp;D &middot; Copenhagen, Zealand, Malm&ouml; &middot; available now</p>
     <div class="cta">
       <a class="btn primary" href="#work">See the work</a>
       <a class="btn" href="https://www.linkedin.com/in/ahmad-mohammad-ab4880295/" rel="noopener">LinkedIn</a>
@@ -62,10 +76,16 @@
       <a class="btn" href="projects/landing-gear.html">Open sheet 01</a>
     </div>
     <div>
-      <figure class="plate">
-        <div class="img"><img src="assets/img/thesis/terrain-block-photo.webp" srcset="assets/img/thesis/terrain-block-photo-sm.webp 720w, assets/img/thesis/terrain-block-photo.webp 1200w" sizes="(max-width: 900px) 100vw, 560px" width="1200" height="1600" alt="The drone's three legs standing at different lengths on a slope with a block under one foot." loading="lazy" decoding="async"></div>
-        <figcaption><b>FIG. 02</b> 30&deg; slope with a 160&nbsp;mm block: each leg stopped at its own length.</figcaption>
-      </figure>
+      <div class="duo">
+        <figure class="plate">
+          <div class="img"><video muted loop playsinline autoplay preload="auto" width="360" height="640" poster="assets/img/thesis/leg-deployment-poster.webp" aria-label="One telescopic leg extending from 0 to 200 mm on the bench."><source src="assets/video/leg-deployment.mp4" type="video/mp4"></video></div>
+          <figcaption><b>FIG. 02</b> One leg on the bench: 0 to 200&nbsp;mm in 4.17&nbsp;s.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="img"><img src="assets/img/thesis/terrain-block-photo.webp" srcset="assets/img/thesis/terrain-block-photo-sm.webp 720w, assets/img/thesis/terrain-block-photo.webp 1200w" sizes="(max-width: 900px) 50vw, 280px" width="1200" height="1600" alt="The drone's three legs standing at different lengths on a slope with a block under one foot." loading="lazy" decoding="async"></div>
+          <figcaption><b>FIG. 03</b> 30&deg; slope with a 160&nbsp;mm block: each leg stopped at its own length.</figcaption>
+        </figure>
+      </div>
       <p class="dim">200 mm stroke &middot; 4.17 s</p>
     </div>
   </div>
@@ -80,7 +100,7 @@
       <div>
         <h3>Mechatronics Engineer Intern</h3>
         <p class="org">COBOD International A/S &middot; R&amp;D &middot; large 3D printers for concrete</p>
-        <ul><li>Built PLC-based pressure and flow monitoring for the printers' dosing line on an Omron NX102 with IO-Link and turbine flow sensors. My test protocol showed the pump under-delivering its nominal flow.</li><li>Developed an electronics-free, retrofittable cleaning concept for the printers' Z-axis racks, with supplier work, material choice, printed test parts and a Fusion 360 proof of concept.</li><li>Assembled printer control hardware, validated a new PCB, and helped coordinate the company's relocation.</li></ul>
+        <ul><li>Built PLC-based pressure and flow monitoring for the printers' dosing line on an Omron NX102 with IO-Link and turbine flow sensors. My test protocol showed the pump delivering about 35&nbsp;L/h at a 60&nbsp;L/h setting.</li><li>Developed an electronics-free, retrofittable cleaning concept for the printers' Z-axis racks, with supplier work, material choice, printed test parts and a Fusion 360 proof of concept.</li><li>Assembled printer control hardware, validated a new PCB, and helped coordinate the company's relocation.</li></ul>
         <p class="more"><a href="projects/cobod.html">Sheet 02: the internship projects in detail</a></p>
       </div>
     </article>
@@ -191,21 +211,16 @@
 
 <section class="section">
   <h2 class="label"><span class="num">04 &nbsp;</span>Parts list &middot; other work</h2>
-  <p class="note" style="margin:-8px 0 16px; max-width:70ch">Smaller course projects, listed the way a drawing lists its parts. Most were group work; the team column gives the group size.</p>
+  <p class="note" style="margin:-8px 0 16px; max-width:70ch">Smaller course and personal projects, listed the way a drawing lists its parts. Most were group work; the team column gives the group size.</p>
   <div class="table-wrap">
     <table class="parts">
       <thead><tr><th scope="col">Item</th><th scope="col">Title</th><th scope="col">Discipline</th><th scope="col">Context</th><th scope="col">Team</th><th scope="col">Note</th></tr></thead>
-      <tbody><tr><td>01</td><td class="t">Pendulum on Moving Cart</td><td>Control</td><td class="s">Course 62677</td><td>3</td><td class="s">Modelled an inverted pendulum in Simulink and tuned a PID controller that kept the rod within &plusmn;2&deg; under step disturbances.</td></tr>
-<tr><td>02</td><td class="t">Deep-Drawing Process Analysis</td><td>Manufacturing</td><td class="s">Course 41787</td><td>Team</td><td class="s">Tensile and Nakajima tests on steel and aluminium to judge r-values and forming limits.</td></tr>
-<tr><td>03</td><td class="t">Drone Lift Measurement Rig</td><td>Test rig</td><td class="s">Course 62146</td><td>5</td><td class="s">Lever-arm thrust rig that mapped motor lift against electrical power to support propeller choice.</td></tr>
-<tr><td>04</td><td class="t">4-Stroke Engine Kinematics</td><td>Modelling</td><td class="s">Course 62146</td><td>5</td><td class="s">Piston position, velocity and acceleration by vector and trigonometric methods, checked numerically.</td></tr>
-<tr><td>05</td><td class="t">Elastic-Powered Jump Car</td><td>Modelling + build</td><td class="s">Course 62146</td><td>5</td><td class="s">Modelled launch force for a toy car launcher and compared measured and predicted jumps.</td></tr>
-<tr><td>06</td><td class="t">3-D Scanner Geometry</td><td>Kinematics</td><td class="s">Course 62798</td><td>4</td><td class="s">Homogeneous transformation matrices to check camera placement on a turntable scanner.</td></tr>
-<tr><td>07</td><td class="t">DTU Roadrunners PM Framework</td><td>Project management</td><td class="s">Course 63852</td><td>Team</td><td class="s">Stakeholder map, WBS, risk register and KPIs for the Shell Eco-marathon team; ISO 21500/21502 certificate.</td></tr>
-<tr><td>08</td><td class="t">Ballerup Bowling Redesign</td><td>Innovation</td><td class="s">Course 62990</td><td>6</td><td class="s">Reuse-focused renovation concept for a 630&nbsp;m&sup2; space, pitched to the real client.</td></tr>
-<tr><td>09</td><td class="t">Scorched Earth (MATLAB)</td><td>Simulation</td><td class="s">Course 62646</td><td>4</td><td class="s">Projectile game solving 2-D flight with ODE45 under wind and drag.</td></tr>
-<tr><td>10</td><td class="t">Engine Testing &amp; Thermodynamics</td><td>Energy</td><td class="s">Course 62604</td><td>Team</td><td class="s">Bench test of a spark-ignition generator: fuel use and efficiency against electrical load.</td></tr>
-<tr><td>11</td><td class="t">Portable People Counter</td><td>Embedded</td><td class="s">Personal</td><td>Solo</td><td class="s">ESP32 and OAK-D proof of concept fusing vision, time-of-flight and RF sensing. In progress.</td></tr></tbody>
+      <tbody><tr><td>01</td><td class="t">Portable People Counter</td><td data-label="Discipline">Embedded</td><td class="s" data-label="Context">Personal</td><td data-label="Team">Solo</td><td class="s" data-label="Note">ESP32 and OAK-D proof of concept fusing vision, time-of-flight and RF sensing. In progress.</td></tr>
+<tr><td>02</td><td class="t">Pendulum on Moving Cart</td><td data-label="Discipline">Control</td><td class="s" data-label="Context">Course 62677</td><td data-label="Team">3</td><td class="s" data-label="Note">Modelled an inverted pendulum in Simulink and tuned a PID controller that kept the rod within &plusmn;2&deg; under step disturbances.</td></tr>
+<tr><td>03</td><td class="t">Drone Lift Measurement Rig</td><td data-label="Discipline">Test rig</td><td class="s" data-label="Context">Course 62146</td><td data-label="Team">5</td><td class="s" data-label="Note">Lever-arm thrust rig that mapped motor lift against electrical power to support propeller choice.</td></tr>
+<tr><td>04</td><td class="t">3-D Scanner Geometry</td><td data-label="Discipline">Kinematics</td><td class="s" data-label="Context">Course 62798</td><td data-label="Team">4</td><td class="s" data-label="Note">Homogeneous transformation matrices to check camera placement on a turntable scanner.</td></tr>
+<tr><td>05</td><td class="t">Deep-Drawing Process Analysis</td><td data-label="Discipline">Manufacturing</td><td class="s" data-label="Context">Course 41787</td><td data-label="Team">Team</td><td class="s" data-label="Note">Tensile and Nakajima tests on steel and aluminium to judge r-values and forming limits.</td></tr>
+<tr><td>06</td><td class="t">DTU Roadrunners PM Framework</td><td data-label="Discipline">Project management</td><td class="s" data-label="Context">Course 63852</td><td data-label="Team">Team</td><td class="s" data-label="Note">Stakeholder map, WBS, risk register and KPIs for the Shell Eco-marathon team; ISO 21500/21502 certificate.</td></tr></tbody>
     </table>
   </div>
 </section>
@@ -217,6 +232,7 @@
       <dt>Embedded</dt><dd>ESP32, Arduino, KiCad PCB design, Node-RED, sensor integration (IO-Link, time-of-flight, encoders), motor drivers</dd>
       <dt>Controls</dt><dd>Omron PLC (Sysmac Studio, structured text, ladder), IO-Link, EtherNet/IP, PI/PID control, Beckhoff TwinCAT 3 (course labs)</dd>
       <dt>Robotics &amp; UAV</dt><dd>PX4/Pixhawk, MAVLink, Gazebo simulation, UR10, MiR100, Festo MPS</dd>
+      <dt>Test &amp; lab</dt><dd>Test protocol design and systematic fault-finding, calibration against a reference (proving ring, measuring cylinders), hand SMD soldering</dd>
       <dt>Mechanical</dt><dd>SolidWorks, Fusion 360, 3D-print prototyping, mechanism research, materials selection, sheet-metal forming</dd>
       <dt>Programming</dt><dd>Python, MATLAB/Simulink, C++ (Arduino/ESP32)</dd>
       <dt>Certificates</dt><dd>ISO 21500 &amp; ISO 21502 (project management), P-17 welding/thermal cutting</dd>

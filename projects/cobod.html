@@ -6,9 +6,20 @@
 <title>Mechatronics Internship at COBOD · Ahmad Mohammad</title>
 <meta name="description" content="COBOD builds large 3D printers for concrete buildings. In the R&D department I ran two projects largely on my own: inline pressure and flow monitoring for the dosing line, and a cleaning concept for the printers' vertical racks.">
 <meta name="author" content="Ahmad Mohammad">
+<link rel="canonical" href="https://a22bst.github.io/projects/cobod.html">
+<link rel="alternate" hreflang="en" href="https://a22bst.github.io/projects/cobod.html">
+<link rel="alternate" hreflang="da" href="https://a22bst.github.io/da/projects/cobod.html">
+<link rel="alternate" hreflang="x-default" href="https://a22bst.github.io/projects/cobod.html">
+<meta property="og:locale" content="en_GB">
 <meta property="og:title" content="Mechatronics Internship at COBOD · Ahmad Mohammad">
 <meta property="og:description" content="COBOD builds large 3D printers for concrete buildings. In the R&D department I ran two projects largely on my own: inline pressure and flow monitoring for the dosing line, and a cleaning concept for the printers' vertical racks.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://a22bst.github.io/projects/cobod.html">
+<meta property="og:image" content="https://a22bst.github.io/assets/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ahmad Mohammad, mechatronics engineer: a drone on three self-levelling landing legs.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +37,7 @@
     <a href="../index.html#experience">Experience</a>
     <a href="../index.html#skills">Skills</a>
     <a href="../index.html#contact">Contact</a>
+    <a class="lang-switch" href="../da/projects/cobod.html" hreflang="da" lang="da">DA</a>
     <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch colour theme">Dark</button>
   </nav>
 </header>
@@ -49,7 +61,7 @@
   <div class="split">
     <div class="prose">
       <p class="lead">COBOD's printers add chemicals to the concrete through a dosing line. Dosing errors were only caught by eye after printing. I added inline pressure and flow measurement so the system can see what it is actually delivering.</p>
-      <ul><li>Gathered requirements from the dosing, mechatronics and department leads, and read the chemicals' safety data sheets to set the sensor material requirements.</li><li>Selected an IO-Link pressure sensor and a turbine flow sensor with a signal converter, and pitched the choice to the department head for budget approval.</li><li>Built it on an Omron NX102 PLC with a remote EtherNet/IP rack, programmed in Sysmac Studio (structured text, function blocks): a physics-based flow model, two independent flow measurements, sensor monitoring with fault detection and watchdog, and low-level interlocks.</li><li>Designed a systematic test protocol with measuring cylinders at several flow rates. It showed the pump delivering well below its nominal setting.</li></ul>
+      <ul><li>Gathered requirements from the dosing, mechatronics and department leads, and read the chemicals' safety data sheets to set the sensor material requirements.</li><li>Selected an IO-Link pressure sensor and a turbine flow sensor with a signal converter, and pitched the choice to the department head for budget approval.</li><li>Built it on an Omron NX102 PLC with a remote EtherNet/IP rack, programmed in Sysmac Studio (structured text, function blocks): a physics-based flow model, two independent flow measurements, sensor monitoring with fault detection and watchdog, and low-level interlocks.</li><li>Designed a systematic test protocol: four pump settings from 10 to 60&nbsp;L/h, three repeats each, checked with measuring cylinders. It showed the pump delivering about 35&nbsp;L/h at a 60&nbsp;L/h setting.</li></ul>
     </div>
     
 <figure class="plate"><div class="img">
@@ -92,6 +104,7 @@
   </div>
 </section>
 
+<aside class="sheet-contact" aria-label="Contact"><span class="k">Questions about this project?</span><a href="mailto:ahmadm226@gmail.com">ahmadm226@gmail.com</a><a href="https://www.linkedin.com/in/ahmad-mohammad-ab4880295/" rel="noopener">LinkedIn</a></aside>
 <nav class="pager" aria-label="Other sheets"><a href="landing-gear.html"><span>&larr; Sheet 01</span>Adaptive landing gear</a><a class="next" href="compost-buddy.html"><span>Sheet 03 &rarr;</span>Compost Buddy</a></nav>
 <footer class="titleblock" aria-label="Sheet information">
   <div><span>Title</span><b>Mechatronics Internship at COBOD</b></div>

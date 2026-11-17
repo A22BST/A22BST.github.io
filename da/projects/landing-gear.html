@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Terrænadaptivt landingsstel til en VTOL-drone · Ahmad Mohammad</title>
+<meta content="En drone, der lander på en skråning eller på sten, ender med at stå skævt. Vi byggede et landingsstel med tre ben, der forlænges, indtil hver fod rører jorden, så dronen står vandret." name="description"/>
+<meta content="Ahmad Mohammad" name="author"/>
+<link href="https://a22bst.github.io/da/projects/landing-gear.html" rel="canonical"/>
+<link href="https://a22bst.github.io/projects/landing-gear.html" hreflang="en" rel="alternate"/>
+<link href="https://a22bst.github.io/da/projects/landing-gear.html" hreflang="da" rel="alternate"/>
+<link href="https://a22bst.github.io/projects/landing-gear.html" hreflang="x-default" rel="alternate"/>
+<meta content="da_DK" property="og:locale"/>
+<meta content="Terrænadaptivt landingsstel til en VTOL-drone · Ahmad Mohammad" property="og:title"/>
+<meta content="En drone, der lander på en skråning eller på sten, ender med at stå skævt. Vi byggede et landingsstel med tre ben, der forlænges, indtil hver fod rører jorden, så dronen står vandret." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://a22bst.github.io/da/projects/landing-gear.html" property="og:url"/>
+<meta content="https://a22bst.github.io/assets/img/og-card-da.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Ahmad Mohammad, mekatronikingeniør: en drone på tre selvnivellerende landingsben." property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="../../assets/css/style.css" rel="stylesheet"/>
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Spring til indhold</a>
+<header class="topbar">
+<a class="mark" href="../index.html"><svg aria-hidden="true" viewbox="0 0 32 32"><rect fill="none" height="30" stroke="currentColor" stroke-width="2" width="30" x="1" y="1"></rect><path d="M1 22h30M21 22v9" stroke="currentColor" stroke-width="1.5"></path><text fill="currentColor" font-family="Inconsolata, monospace" font-size="12.5" font-weight="700" x="4" y="17">AM</text></svg><span>Ahmad Mohammad</span></a>
+<nav aria-label="Hovednavigation" class="topnav">
+<a href="../index.html#work">Projekter</a>
+<a href="../index.html#experience">Erfaring</a>
+<a href="../index.html#skills">Kompetencer</a>
+<a href="../index.html#contact">Kontakt</a>
+<a class="lang-switch" href="../../projects/landing-gear.html" hreflang="en" lang="en">EN</a>
+<button aria-label="Skift farvetema" class="theme-btn" data-theme-toggle="" type="button">Mørk</button>
+</nav>
+</header>
+<main class="sheet" id="main">
+<div aria-hidden="true" class="zones zones-top"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div aria-hidden="true" class="zones zones-side"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+<div class="crumbs"><a href="../index.html#work">← Alle projekter</a><span>Ark 01 af 08</span></div>
+<header class="p-head">
+<div>
+<p class="eyebrow">Bachelorprojekt · DTU · hold på 2</p>
+<h1>Terrænadaptivt landingsstel til en VTOL-drone</h1>
+<p class="lead">En drone, der lander på en skråning eller på sten, ender med at stå skævt. Vi byggede et landingsstel med tre ben, der forlænges, indtil hver fod rører jorden, så dronen står vandret.</p>
+</div>
+<dl class="spec"><div><dt>Sammenhæng</dt><dd>Bachelorprojekt, DTU</dd></div><div><dt>Hold</dt><dd>2 personer</dd></div><div><dt>Min rolle</dt><dd>Mekatronik &amp; systemintegration</dd></div><div><dt>Værktøjer</dt><dd>ESP32, KiCad, PX4, Gazebo, MAVLink, Python</dd></div></dl>
+</header>
+<figure class="plate hero-plate white"><div class="img"><img alt="Holybro X650-quadcopter på tre hvide og sorte teleskopiske landingsben." decoding="async" fetchpriority="high" height="1028" sizes="100vw" src="../../assets/img/thesis/x650-hero.webp" srcset="../../assets/img/thesis/x650-hero-sm.webp 720w, ../../assets/img/thesis/x650-hero.webp 1122w" width="1122"/></div><figcaption><b>FIG. 01</b> X650 på de tre adaptive ben.</figcaption></figure>
+<dl class="numbers"><div><dt>200 mm</dt><dd>slaglængde pr. ben</dd></div><div><dt>4,17 s</dt><dd>målt fuld udfoldning</dd></div><div><dt>2.1–2.9°</dt><dd>hældning efter stabilisering på den byggede drone, fem terræner</dd></div><div><dt>0.25–1.24°</dt><dd>simuleret hældning mod 6,5–10,5° med faste ben</dd></div></dl>
+<section class="section">
+<h2 class="label">Problemet</h2>
+<div class="split">
+<div class="prose">
+<p>Multirotordroner har brug for fladt underlag. På en skråning eller på sten ender kroppen med at hælde, og næste start er risikabel, fordi løftekraften virker langs den hældende krop frem for lodret opad. Faste landingsben overfører hver ujævnhed i terrænet direkte til dronens stel.</p>
+<p>Spørgsmålet, vi stillede os: kan kroppens resterende hældning efter landing bringes under 5° på skråninger op til 30° og ved højdeforskelle op til 200 mm sammenlignet med faste ben på samme Holybro X650?</p>
+</div>
+<figure class="plate white"><div class="img"><video autoplay="" controls="" height="720" loop="" muted="" playsinline="" poster="../../assets/img/thesis/terrain-problem-poster.webp" preload="auto" width="1280"><source src="../../assets/video/terrain-problem.mp4" type="video/mp4"/></video></div><figcaption><b>FIG. 02</b> Animation (1,5× hastighed): på en skråning bevæger tyngdepunktet sig mod kanten af støttepolygonen, og dronen kan vælte.</figcaption></figure>
+</div>
+</section>
+<section class="section">
+<h2 class="label">Hvad vi byggede</h2>
+<div class="prose">
+<p>Vi sammenlignede fire familier af eksisterende mekanismer (ledmekanismer, lineær forlængelse, leddelte ben og løftekraftassisterede konstruktioner) og valgte lineær forlængelse gennem et vægtet konceptvalg. Det endelige stel har tre ben ved 0°, 120° og 240°.</p>
+<ul><li>Hvert ben er et teleskop med tre trin. En DC-gearmotor drejer tre 3D-printede skruer indlejret i hinanden, 6 + 6 + 6 = 18 mm bevægelse pr. motoromdrejning, ca. 48 mm/s.</li><li>En fod med kugleled har en kontakt og en fjeder, der giver efter. Når foden rører jorden, stopper kontakten det pågældende ben. Der beregnes ingen mållængde: hver fod bestemmer selv sin endelige længde.</li><li>En VL53L5CX-time-of-flight-sensor med flere målezoner ser ned på jorden og afgør, om benene overhovedet skal foldes ud.</li><li>To ESP32-mikrocontrollere på et CNC-fræset bærekort, TB6612-motordrivere og encodere styrer benene. Stellet kommunikerer med Pixhawk 6C-flight controlleren via MAVLink.</li><li>Monteret vejer stellet 1,904 kg; hele dronen vejer 4,454 kg, 70,7 % af X650's maksimale startvægt på 6,3 kg.</li></ul>
+</div>
+<div class="plates" style="margin-top:28px">
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Fire stregtegninger af landingsstellets mekanismefamilier: svingende ledmekanisme, lineær slaglængde, leddelt rækkevidde og løftekraftassisteret frigang." class="img" href="../../assets/img/thesis/mechanism-families.webp"><img alt="Fire stregtegninger af landingsstellets mekanismefamilier: svingende ledmekanisme, lineær slaglængde, leddelt rækkevidde og løftekraftassisteret frigang." decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/mechanism-families.webp" srcset="../../assets/img/thesis/mechanism-families-sm.webp 720w, ../../assets/img/thesis/mechanism-families.webp 1600w" width="1600"/></a><figcaption><b>FIG. 03</b> Fire mekanismefamilier fra sammenligningen; lineær forlængelse blev valgt. <span class="who">Mekanismeundersøgelse: mit arbejde</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Snittegning af benet med betegnelser, der viser tre koncentriske drivskruer drevet af én motor." class="img" href="../../assets/img/thesis/concentric-screws.webp"><img alt="Snittegning af benet med betegnelser, der viser tre koncentriske drivskruer drevet af én motor." decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/concentric-screws.webp" srcset="../../assets/img/thesis/concentric-screws-sm.webp 720w, ../../assets/img/thesis/concentric-screws.webp 1600w" width="1600"/></a><figcaption><b>FIG. 04</b> Tre koncentriske skruer, én motor. Teleskoptrinnene forlænges sammen.</figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Farvet CAD-snit af et ben med fastgørelse til dronestellet, drivskruer, teleskopmuffer, kugleled og fodplade." class="img" href="../../assets/img/thesis/leg-cutaway.webp"><img alt="Farvet CAD-snit af et ben med fastgørelse til dronestellet, drivskruer, teleskopmuffer, kugleled og fodplade." decoding="async" height="752" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/leg-cutaway.webp" srcset="../../assets/img/thesis/leg-cutaway-sm.webp 720w, ../../assets/img/thesis/leg-cutaway.webp 1600w" width="1600"/></a><figcaption><b>FIG. 05</b> Snit gennem et ben. <span class="who">Holdets CAD (partner)</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Foto af et printet sort teleskopisk ben med de tre trin markeret." class="img" href="../../assets/img/thesis/leg-stages-photo.webp"><img alt="Foto af et printet sort teleskopisk ben med de tre trin markeret." decoding="async" height="752" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/leg-stages-photo.webp" srcset="../../assets/img/thesis/leg-stages-photo-sm.webp 720w, ../../assets/img/thesis/leg-stages-photo.webp 1600w" width="1600"/></a><figcaption><b>FIG. 06</b> Printet ben med de tre trin forlænget. <span class="who">Holdets bygning</span></figcaption></figure>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Foto af 3D-printede skrue- og møtrikdele fra en tidlig iteration på et bord." class="img" href="../../assets/img/thesis/printed-screw-parts.webp"><img alt="Foto af 3D-printede skrue- og møtrikdele fra en tidlig iteration på et bord." decoding="async" height="1600" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/printed-screw-parts.webp" srcset="../../assets/img/thesis/printed-screw-parts-sm.webp 720w, ../../assets/img/thesis/printed-screw-parts.webp 1200w" width="1200"/></a><figcaption><b>FIG. 07</b> Printede skruedele fra iterationerne. <span class="who">Holdets bygning</span></figcaption></figure>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Foto af tre hvide og sorte ben monteret under en kulfiberplade med ledninger." class="img" href="../../assets/img/thesis/legs-on-plate.webp"><img alt="Foto af tre hvide og sorte ben monteret under en kulfiberplade med ledninger." decoding="async" height="715" loading="lazy" src="../../assets/img/thesis/legs-on-plate.webp" width="536"/></a><figcaption><b>FIG. 08</b> Tre ben på monteringspladen før montering på dronen. <span class="who">Holdets bygning</span></figcaption></figure>
+</div>
+</section>
+<section class="section">
+<h2 class="label">Min del</h2>
+<div class="mypart">
+<span class="eyebrow">Hvad jeg lavede i dette tomandsprojekt</span>
+<p>Jeg stod for mekatronikken og systemintegrationen: at få mekanik, elektronik og software til at fungere som ét system.</p>
+<ul><li>Byggede og forbandt elektronikken fra bunden: motorerne og sensorerne, der lader hvert ben registrere jorden og bevæge sig selvstændigt.</li><li>Skrev ESP32-firmwaren, der styrer benene i realtid, opdelt i benstyring og måling/kommunikation.</li><li>Designede printkortet til styringen i KiCad (CNC-fræset), som samler sensorer, motordrivere og controllere.</li><li>Byggede en software-in-the-loop-simulering af hele dronen i PX4/Gazebo for at sammenligne adaptive og faste landingsstel på skråninger og ujævnt terræn før fysiske test.</li><li>Undersøgte eksisterende mekanismer i bøger og andre kilder som grundlag for konceptvalget.</li></ul>
+<p class="note">Min projektpartner stod for benets CAD, iterationerne af det 3D-printede ben og den strukturelle FEA. Det er holdets resultater på denne side, ikke mine.</p>
+</div>
+<div class="plates" style="margin-top:28px">
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Blokdiagram: terræn, central time-of-flight-sensor, beslutning om udfoldning, controller og tre ben, hver med motor, encoder, kontakt i foden og hjemmekontakt." class="img" href="../../assets/img/thesis/architecture.webp"><img alt="Blokdiagram: terræn, central time-of-flight-sensor, beslutning om udfoldning, controller og tre ben, hver med motor, encoder, kontakt i foden og hjemmekontakt." decoding="async" height="752" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/architecture.webp" srcset="../../assets/img/thesis/architecture-sm.webp 720w, ../../assets/img/thesis/architecture.webp 1600w" width="1600"/></a><figcaption><b>FIG. 09</b> Systemarkitektur. ToF-sensoren afgør, om benene skal foldes ud; hver fod bestemmer sin egen længde. <span class="who mine">Mit arbejde</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Flowdiagram: udfoldningskommando, motordrift, encoder overvåger bevægelsen, lukket kontakt i foden medfører stop og fastholdelse, nået slaglængdegrænse medfører fejl." class="img" href="../../assets/img/thesis/contact-stop-logic.webp"><img alt="Flowdiagram: udfoldningskommando, motordrift, encoder overvåger bevægelsen, lukket kontakt i foden medfører stop og fastholdelse, nået slaglængdegrænse medfører fejl." decoding="async" height="752" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/contact-stop-logic.webp" srcset="../../assets/img/thesis/contact-stop-logic-sm.webp 720w, ../../assets/img/thesis/contact-stop-logic.webp 1600w" width="1600"/></a><figcaption><b>FIG. 10</b> Benets logik: stop ved kontakt, meld fejl, hvis slaglængdegrænsen nås først. <span class="who mine">Mit arbejde</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Ledningsblokdiagram for landingsstellets elektronik: strømforsyning, to ESP32-kort, ToF-sensor, motordrivere og tre ben." class="img" href="../../assets/img/thesis/electronics-diagram.webp"><img alt="Ledningsblokdiagram for landingsstellets elektronik: strømforsyning, to ESP32-kort, ToF-sensor, motordrivere og tre ben." decoding="async" height="752" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/electronics-diagram.webp" srcset="../../assets/img/thesis/electronics-diagram-sm.webp 720w, ../../assets/img/thesis/electronics-diagram.webp 1600w" width="1600"/></a><figcaption><b>FIG. 11</b> Elektronikken som bygget: to ESP32'er, motordrivere, ToF-sensor og feedback fra benene. <span class="who mine">Mit arbejde</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: KiCad-3D-rendering af et grønt bærekort med stiftlister til to ESP32-moduler og stik." class="img" href="../../assets/img/thesis/carrier-pcb.webp"><img alt="KiCad-3D-rendering af et grønt bærekort med stiftlister til to ESP32-moduler og stik." decoding="async" height="984" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/carrier-pcb.webp" srcset="../../assets/img/thesis/carrier-pcb-sm.webp 720w, ../../assets/img/thesis/carrier-pcb.webp 1568w" width="1568"/></a><figcaption><b>FIG. 12</b> Bærekortet som designet i KiCad og CNC-fræset. <span class="who mine">Mit arbejde</span></figcaption></figure>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Bærbar computerskærm med et dybde-heatmap på 8 gange 8 felter og signalkurver fra time-of-flight-sensoren i realtid." class="img" href="../../assets/img/thesis/tof-live.webp"><img alt="Bærbar computerskærm med et dybde-heatmap på 8 gange 8 felter og signalkurver fra time-of-flight-sensoren i realtid." decoding="async" height="1050" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/tof-live.webp" srcset="../../assets/img/thesis/tof-live-sm.webp 720w, ../../assets/img/thesis/tof-live.webp 1400w" width="1400"/></a><figcaption><b>FIG. 13</b> Realtidsdata fra time-of-flight-sensoren med 8×8 felter under test på testbænken. <span class="who mine">Mit arbejde</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Diagram over flyvestyringsopsætningen: jordstation, radioer, Pixhawk 6C, PWM-kort, ESC'er, motorer og grænsefladen til stellet." class="img" href="../../assets/img/thesis/flight-control-diagram.webp"><img alt="Diagram over flyvestyringsopsætningen: jordstation, radioer, Pixhawk 6C, PWM-kort, ESC'er, motorer og grænsefladen til stellet." decoding="async" height="752" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/flight-control-diagram.webp" srcset="../../assets/img/thesis/flight-control-diagram-sm.webp 720w, ../../assets/img/thesis/flight-control-diagram.webp 1600w" width="1600"/></a><figcaption><b>FIG. 14</b> Flyvestyring og landingsstellets tilslutning. <span class="who mine">Mit arbejde</span></figcaption></figure>
+</div>
+</section>
+<section class="section">
+<h2 class="label">Resultater</h2>
+<div class="split">
+<div class="prose">
+<p><b>Simulering.</b> I mine PX4/Gazebo-kørsler stabiliserede det adaptive stel sig ved en hældning på 0,25–1,24° i ujævnt terræn mod 6,5–10,5° for faste ben på samme terræn (én kørsel pr. terræntilfælde).</p>
+<p><b>Den byggede drone.</b> På fem terrænopstillinger stabiliserede benene X650 ved 2,1–2,9°: fladt underlag 2,1°, 100 mm trin 2,3°, 23° skråning med et trin 2,8°, 30° skråning 2,6° og en 30° skråning med en 160 mm klods 2,9°. Benene blev styret manuelt med rotorerne uden strøm og dronen i en sikkerhedsline.</p>
+<p><b>Udfoldning.</b> Fuld forlængelse på 200 mm tog 4,17 s på testbænken.</p>
+</div>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Søjlediagram over målt resterende hældning på fem terræner, alle mellem 2,1 og 2,9 grader, under en acceptgrænse på 5 grader." class="img" href="../../assets/img/thesis/tilt-physical-chart.webp"><img alt="Søjlediagram over målt resterende hældning på fem terræner, alle mellem 2,1 og 2,9 grader, under en acceptgrænse på 5 grader." decoding="async" height="767" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/tilt-physical-chart.webp" srcset="../../assets/img/thesis/tilt-physical-chart-sm.webp 720w, ../../assets/img/thesis/tilt-physical-chart.webp 1600w" width="1600"/></a><figcaption><b>FIG. 15</b> Målt hældning på den byggede drone, fem terræner. <span class="who">Holdets test</span></figcaption></figure>
+</div>
+<div class="plates" style="margin-top:28px">
+<figure class="plate wide"><div class="img"><video controls="" height="407" loop="" muted="" playsinline="" poster="../../assets/img/thesis/sim-poster.webp" preload="none" width="1280"><source src="../../assets/video/adaptive-vs-rigid-sim.mp4" type="video/mp4"/></video></div><figcaption><b>FIG. 16</b> Simulering, 20° skråning: adaptive ben (venstre) lander vandret; faste ben (højre) ender med at hælde. <span class="who mine">Mit arbejde</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Vandret søjlediagram, der sammenligner resterende hældning med faste og adaptive ben på fladt underlag, skråninger på 10, 15 og 20 grader samt terræn med to trin og klodser." class="img" href="../../assets/img/thesis/tilt-sim-chart.webp"><img alt="Vandret søjlediagram, der sammenligner resterende hældning med faste og adaptive ben på fladt underlag, skråninger på 10, 15 og 20 grader samt terræn med to trin og klodser." decoding="async" height="752" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/tilt-sim-chart.webp" srcset="../../assets/img/thesis/tilt-sim-chart-sm.webp 720w, ../../assets/img/thesis/tilt-sim-chart.webp 1600w" width="1600"/></a><figcaption><b>FIG. 17</b> Simuleret hældning, faste ben (rød) mod adaptive ben (blå), én kørsel pr. felt. <span class="who mine">Mit arbejde</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: To billeder fra simuleringen: den adaptive drone står vandret på tre klodser, og standarddronen er landet ved siden af målet." class="img" href="../../assets/img/thesis/sim-blocks.webp"><img alt="To billeder fra simuleringen: den adaptive drone står vandret på tre klodser, og standarddronen er landet ved siden af målet." decoding="async" height="525" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/sim-blocks.webp" srcset="../../assets/img/thesis/sim-blocks-sm.webp 720w, ../../assets/img/thesis/sim-blocks.webp 1600w" width="1600"/></a><figcaption><b>FIG. 18</b> Simulering på tre adskilte klodser. <span class="who mine">Mit arbejde</span></figcaption></figure>
+<figure class="plate"><div class="img"><video controls="" height="640" loop="" muted="" playsinline="" poster="../../assets/img/thesis/leg-deployment-poster.webp" preload="none" width="360"><source src="../../assets/video/leg-deployment.mp4" type="video/mp4"/></video></div><figcaption><b>FIG. 19</b> Et ben på testbænken: 0 til 200 mm på 4,17 s. <span class="who">Holdets test</span></figcaption></figure>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Foto af dronens tre ben med forskellige længder på en skråning med en klods under den ene fod." class="img" href="../../assets/img/thesis/terrain-block-photo.webp"><img alt="Foto af dronens tre ben med forskellige længder på en skråning med en klods under den ene fod." decoding="async" height="1600" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/terrain-block-photo.webp" srcset="../../assets/img/thesis/terrain-block-photo-sm.webp 720w, ../../assets/img/thesis/terrain-block-photo.webp 1200w" width="1200"/></a><figcaption><b>FIG. 20</b> 30° skråning med en klods: hvert ben stoppede ved sin egen længde. <span class="who">Holdets test</span></figcaption></figure>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Foto af X650-dronen med de tre adaptive ben monteret, stående i et laboratorium." class="img" href="../../assets/img/thesis/mounted-legs.webp"><img alt="Foto af X650-dronen med de tre adaptive ben monteret, stående i et laboratorium." decoding="async" height="1600" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/mounted-legs.webp" srcset="../../assets/img/thesis/mounted-legs-sm.webp 720w, ../../assets/img/thesis/mounted-legs.webp 1200w" width="1200"/></a><figcaption><b>FIG. 21</b> Benene monteret på X650. <span class="who">Holdets bygning</span></figcaption></figure>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Foto af X650, der svæver lavt i en stor hal." class="img" href="../../assets/img/thesis/hover-cobod-hall.webp"><img alt="Foto af X650, der svæver lavt i en stor hal." decoding="async" height="1280" loading="lazy" src="../../assets/img/thesis/hover-cobod-hall.webp" width="720"/></a><figcaption><b>FIG. 22</b> Første svævetest af X650, på faste ben. Det adaptive stel fløj aldrig. <span class="who">Holdets test</span></figcaption></figure>
+</div>
+</section>
+<section class="section">
+<div class="split">
+<div class="prose">
+<h3 class="eyebrow">Det lærte jeg af projektet</h3>
+<ul><li>Målet om flyvning udvidede projektets omfang og belastede én person. Fastlås en version, der kan testes, før kalibrering og samlede test.</li><li>Konstruér samlinger, så de kan serviceres. Tilpasninger forstyrrede gentagne gange ledningsføringen.</li><li>Et strømførende controllerkort kortsluttede mod den elektrisk ledende kulfiberramme. Isolering og montering er en del af elektronikkonstruktionen.</li></ul>
+</div>
+<div class="prose">
+<h3 class="eyebrow">Forslag til næste skridt</h3>
+<ul><li>Automatisk udfoldning udløst af ToF-sensoren, derefter validering af hele systemet i flyvning og til sidst belastningstilfælde med stød, sidebelastning og knækning.</li><li>En CNC-skåret monteringsplade i kulfiber for at reducere bøjning.</li><li>Et firelagsprintkort med én controller, polariserede stik og strømfeedback som erstatning for det håndforbundne bærekort med to ESP32'er.</li></ul>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: KiCad-rendering af et foreslået kort med én controller og mærkede stik til tre ben." class="img" href="../../assets/img/thesis/proposed-pcb.webp"><img alt="KiCad-rendering af et foreslået kort med én controller og mærkede stik til tre ben." decoding="async" height="1488" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/thesis/proposed-pcb.webp" srcset="../../assets/img/thesis/proposed-pcb-sm.webp 720w, ../../assets/img/thesis/proposed-pcb.webp 1568w" width="1568"/></a><figcaption><b>FIG. 23</b> Foreslået firelagsprintkort, kun en rendering af designet (ikke fremstillet). <span class="who mine">Mit arbejde</span></figcaption></figure>
+</div>
+</div>
+</section>
+<aside aria-label="Kontakt" class="sheet-contact"><span class="k">Spørgsmål til projektet?</span><a href="mailto:ahmadm226@gmail.com">ahmadm226@gmail.com</a><a href="https://www.linkedin.com/in/ahmad-mohammad-ab4880295/" rel="noopener">LinkedIn</a></aside>
+<nav aria-label="Andre ark" class="pager"><a href="../index.html"><span>← Ark 00</span>Oversigt</a><a class="next" href="cobod.html"><span>Ark 02 →</span>Praktik hos COBOD</a></nav>
+<footer aria-label="Arkoplysninger" class="titleblock">
+<div><span>Titel</span><b>Terrænadaptivt landingsstel til en VTOL-drone</b></div>
+<div><span>Tegnet af</span><b>A. Mohammad</b></div>
+<div><span>Ark</span><b>01 af 08</b></div>
+<div><span>Målestok</span><b>NTS</b></div>
+<div><span>Rev</span><b>A</b></div>
+</footer>
+</main>
+<script defer="" src="../../assets/js/site.js"></script>
+</body>
+</html>

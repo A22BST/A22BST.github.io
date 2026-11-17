@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Målmandsrobot til bordfodbold · Ahmad Mohammad</title>
+<meta content="En robotmålmand til bordfodbold. Et kamera over bordet følger bolden, og stepmotorer flytter og svinger målmanden for at blokere skud." name="description"/>
+<meta content="Ahmad Mohammad" name="author"/>
+<link href="https://a22bst.github.io/da/projects/foosball-robot.html" rel="canonical"/>
+<link href="https://a22bst.github.io/projects/foosball-robot.html" hreflang="en" rel="alternate"/>
+<link href="https://a22bst.github.io/da/projects/foosball-robot.html" hreflang="da" rel="alternate"/>
+<link href="https://a22bst.github.io/projects/foosball-robot.html" hreflang="x-default" rel="alternate"/>
+<meta content="da_DK" property="og:locale"/>
+<meta content="Målmandsrobot til bordfodbold · Ahmad Mohammad" property="og:title"/>
+<meta content="En robotmålmand til bordfodbold. Et kamera over bordet følger bolden, og stepmotorer flytter og svinger målmanden for at blokere skud." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://a22bst.github.io/da/projects/foosball-robot.html" property="og:url"/>
+<meta content="https://a22bst.github.io/assets/img/og-card-da.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Ahmad Mohammad, mekatronikingeniør: en drone på tre selvnivellerende landingsben." property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="../../assets/css/style.css" rel="stylesheet"/>
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Spring til indhold</a>
+<header class="topbar">
+<a class="mark" href="../index.html"><svg aria-hidden="true" viewbox="0 0 32 32"><rect fill="none" height="30" stroke="currentColor" stroke-width="2" width="30" x="1" y="1"></rect><path d="M1 22h30M21 22v9" stroke="currentColor" stroke-width="1.5"></path><text fill="currentColor" font-family="Inconsolata, monospace" font-size="12.5" font-weight="700" x="4" y="17">AM</text></svg><span>Ahmad Mohammad</span></a>
+<nav aria-label="Hovednavigation" class="topnav">
+<a href="../index.html#work">Projekter</a>
+<a href="../index.html#experience">Erfaring</a>
+<a href="../index.html#skills">Kompetencer</a>
+<a href="../index.html#contact">Kontakt</a>
+<a class="lang-switch" href="../../projects/foosball-robot.html" hreflang="en" lang="en">EN</a>
+<button aria-label="Skift farvetema" class="theme-btn" data-theme-toggle="" type="button">Mørk</button>
+</nav>
+</header>
+<main class="sheet" id="main">
+<div aria-hidden="true" class="zones zones-top"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div aria-hidden="true" class="zones zones-side"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+<div class="crumbs"><a href="../index.html#work">← Alle projekter</a><span>Ark 04 af 08</span></div>
+<header class="p-head">
+<div>
+<p class="eyebrow">Kursus 62800 Introduktion til mekatronik- og robotsystemer · DTU · hold på 2</p>
+<h1>Målmandsrobot til bordfodbold</h1>
+<p class="lead">En robotmålmand til bordfodbold. Et kamera over bordet følger bolden, og stepmotorer flytter og svinger målmanden for at blokere skud.</p>
+</div>
+<dl class="spec"><div><dt>Sammenhæng</dt><dd>Kursus 62800, DTU</dd></div><div><dt>Hold</dt><dd>2 personer</dd></div><div><dt>Min rolle</dt><dd>Krav, hastighedstest, mekanisk konstruktion &amp; CAD</dd></div><div><dt>Værktøjer</dt><dd>Arduino, Nema 17, Python/OpenCV, CAD</dd></div></dl>
+</header>
+<dl class="numbers"><div><dt>1,06 m/s</dt><dd>skudhastighed (median), 67 % af et standardbord</dd></div><div><dt>0,60 m/s</dt><dd>sidehastighed (median), 138 % af et standardbord</dd></div><div><dt>2</dt><dd>stepmotorakser: sidebevægelse og skud</dd></div></dl>
+<section class="section">
+<h2 class="label">Hvad vi byggede</h2>
+<div class="split">
+<div class="prose">
+<ul><li>Et specialbygget bord med en spilleflade på 39,7 × 53,2 cm, malet sort for at give kameraet god kontrast.</li><li>Et kamera på en mast af ti 3D-printede dele over banen. Python med OpenCV følger bolden og målmanden ud fra farve, kalibreret fra pixelpositioner til målmandspositioner.</li><li>To Nema 17-stepmotorer styret af en Arduino (AccelStepper): den ene flytter målmanden på en 6 mm tandrem skjult i de hule sidevægge, den anden svinger målmanden for at skyde. Endestop kalibrerer bevægelsesområdet.</li><li>Et elektronikrum under banen til Arduino, stepmotordrivere og remmekanik.</li></ul>
+</div>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: CAD-rendering af en sort bordfodboldkasse med kameramast og håndtag." class="img" href="../../assets/img/foosball/render.webp"><img alt="CAD-rendering af en sort bordfodboldkasse med kameramast og håndtag." decoding="async" height="884" loading="lazy" src="../../assets/img/foosball/render.webp" width="709"/></a><figcaption><b>FIG. 01</b> CAD-model af bordet med kameramast. <span class="who">Min CAD</span></figcaption></figure>
+</div>
+</section>
+<section class="section">
+<h2 class="label">Min del</h2>
+<div class="mypart">
+<span class="eyebrow">Hvad jeg lavede på holdet på to</span>
+<ul><li>Skrev kravspecifikationen.</li><li>Gennemførte proof of concept-forsøg med skudhastighed og sidehastighed, som validerede konceptet.</li><li>Stod for den mekaniske konstruktion og CAD.</li><li>Arbejdede med Arduino og stepmotorstyring sammen med min holdkammerat.</li></ul>
+</div>
+</section>
+<section class="section">
+<h2 class="label">Resultater og begrænsninger</h2>
+<div class="split">
+<div class="prose">
+<p>Vi filmede skud og sidebevægelser på et standardbord og på vores robotbord og analyserede videoerne i LoggerPro.</p>
+<ul><li>Skudhastighed (median): 1,06 m/s for robotten mod 1,58 m/s på et standardbord, ca. 67 %.</li><li>Sidehastighed (median): 0,60 m/s for robotten mod 0,43 m/s på et standardbord, ca. 138 %.</li><li>Sporing og styring i realtid fungerede. Vi fandt svagheder ved tandremsspændingen, tandhjulets greb, kameramastens rotation og den dårlige adgang til elektronikrummet.</li></ul>
+</div>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Kamerabillede af bordfodboldbordet set ovenfra med de sporede positioner indtegnet." class="img" href="../../assets/img/foosball/tracking.webp"><img alt="Kamerabillede af bordfodboldbordet set ovenfra med de sporede positioner indtegnet." decoding="async" height="532" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/foosball/tracking.webp" srcset="../../assets/img/foosball/tracking-sm.webp 720w, ../../assets/img/foosball/tracking.webp 900w" width="900"/></a><figcaption><b>FIG. 02</b> Kamerabillede set ovenfra, anvendt til sporing og hastighedsanalyse. <span class="who">Hold</span></figcaption></figure>
+</div>
+<div class="plates" style="margin-top:20px">
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Eksploderet CAD-visning af bordkabinettet, remholderne og målmandens dele." class="img" href="../../assets/img/foosball/exploded.webp"><img alt="Eksploderet CAD-visning af bordkabinettet, remholderne og målmandens dele." decoding="async" height="873" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/foosball/exploded.webp" srcset="../../assets/img/foosball/exploded-sm.webp 720w, ../../assets/img/foosball/exploded.webp 939w" width="939"/></a><figcaption><b>FIG. 03</b> Eksploderet visning af bordet. <span class="who">Min CAD</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: CAD-visning inde i bordet med målmandsstangen og remdrevet." class="img" href="../../assets/img/foosball/belt-drive.webp"><img alt="CAD-visning inde i bordet med målmandsstangen og remdrevet." decoding="async" height="523" loading="lazy" src="../../assets/img/foosball/belt-drive.webp" width="720"/></a><figcaption><b>FIG. 04</b> Drev til sidebevægelse med tandrem. <span class="who">Min CAD</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: CAD-nærbillede af den remdrevne skudmekanisme på målmandsstangen." class="img" href="../../assets/img/foosball/kick-mechanism.webp"><img alt="CAD-nærbillede af den remdrevne skudmekanisme på målmandsstangen." decoding="async" height="823" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/foosball/kick-mechanism.webp" srcset="../../assets/img/foosball/kick-mechanism-sm.webp 720w, ../../assets/img/foosball/kick-mechanism.webp 863w" width="863"/></a><figcaption><b>FIG. 05</b> Skudmekanisme, remmen fremhævet med blåt. <span class="who">Min CAD</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Ledningsdiagram for Arduino med to stepmotordrivere og endestop." class="img" href="../../assets/img/foosball/wiring.webp"><img alt="Ledningsdiagram for Arduino med to stepmotordrivere og endestop." decoding="async" height="358" loading="lazy" src="../../assets/img/foosball/wiring.webp" width="488"/></a><figcaption><b>FIG. 06</b> Stepmotorernes ledningsføring. <span class="who">Hold</span></figcaption></figure>
+</div>
+</section>
+<aside aria-label="Kontakt" class="sheet-contact"><span class="k">Spørgsmål til projektet?</span><a href="mailto:ahmadm226@gmail.com">ahmadm226@gmail.com</a><a href="https://www.linkedin.com/in/ahmad-mohammad-ab4880295/" rel="noopener">LinkedIn</a></aside>
+<nav aria-label="Andre ark" class="pager"><a href="compost-buddy.html"><span>← Ark 03</span>Compost Buddy</a><a class="next" href="industry-4-0.html"><span>Ark 05 →</span>Industri 4.0-laboratorium</a></nav>
+<footer aria-label="Arkoplysninger" class="titleblock">
+<div><span>Titel</span><b>Målmandsrobot til bordfodbold</b></div>
+<div><span>Tegnet af</span><b>A. Mohammad</b></div>
+<div><span>Ark</span><b>04 af 08</b></div>
+<div><span>Målestok</span><b>NTS</b></div>
+<div><span>Rev</span><b>A</b></div>
+</footer>
+</main>
+<script defer="" src="../../assets/js/site.js"></script>
+</body>
+</html>

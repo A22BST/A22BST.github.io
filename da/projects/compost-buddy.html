@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Compost Buddy: intelligent kompostbeholder · Ahmad Mohammad</title>
+<meta content="En kompostbeholder til folk i lejligheder, der overvåger sin egen temperatur, fugtighed og pH, rører selv og tilsætter vand efter behov." name="description"/>
+<meta content="Ahmad Mohammad" name="author"/>
+<link href="https://a22bst.github.io/da/projects/compost-buddy.html" rel="canonical"/>
+<link href="https://a22bst.github.io/projects/compost-buddy.html" hreflang="en" rel="alternate"/>
+<link href="https://a22bst.github.io/da/projects/compost-buddy.html" hreflang="da" rel="alternate"/>
+<link href="https://a22bst.github.io/projects/compost-buddy.html" hreflang="x-default" rel="alternate"/>
+<meta content="da_DK" property="og:locale"/>
+<meta content="Compost Buddy: intelligent kompostbeholder · Ahmad Mohammad" property="og:title"/>
+<meta content="En kompostbeholder til folk i lejligheder, der overvåger sin egen temperatur, fugtighed og pH, rører selv og tilsætter vand efter behov." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://a22bst.github.io/da/projects/compost-buddy.html" property="og:url"/>
+<meta content="https://a22bst.github.io/assets/img/og-card-da.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Ahmad Mohammad, mekatronikingeniør: en drone på tre selvnivellerende landingsben." property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='%23fbfcfc' stroke='%232b5f7a' stroke-width='3'/%3E%3Cpath d='M1.5 21.5h29M20.5 21.5v9' stroke='%232b5f7a' stroke-width='2'/%3E%3Ctext x='4.5' y='17' font-family='monospace' font-weight='700' font-size='12' fill='%232b5f7a'%3EAM%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="../../assets/css/style.css" rel="stylesheet"/>
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Spring til indhold</a>
+<header class="topbar">
+<a class="mark" href="../index.html"><svg aria-hidden="true" viewbox="0 0 32 32"><rect fill="none" height="30" stroke="currentColor" stroke-width="2" width="30" x="1" y="1"></rect><path d="M1 22h30M21 22v9" stroke="currentColor" stroke-width="1.5"></path><text fill="currentColor" font-family="Inconsolata, monospace" font-size="12.5" font-weight="700" x="4" y="17">AM</text></svg><span>Ahmad Mohammad</span></a>
+<nav aria-label="Hovednavigation" class="topnav">
+<a href="../index.html#work">Projekter</a>
+<a href="../index.html#experience">Erfaring</a>
+<a href="../index.html#skills">Kompetencer</a>
+<a href="../index.html#contact">Kontakt</a>
+<a class="lang-switch" href="../../projects/compost-buddy.html" hreflang="en" lang="en">EN</a>
+<button aria-label="Skift farvetema" class="theme-btn" data-theme-toggle="" type="button">Mørk</button>
+</nav>
+</header>
+<main class="sheet" id="main">
+<div aria-hidden="true" class="zones zones-top"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div aria-hidden="true" class="zones zones-side"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+<div class="crumbs"><a href="../index.html#work">← Alle projekter</a><span>Ark 03 af 08</span></div>
+<header class="p-head">
+<div>
+<p class="eyebrow">Kursus 41029 Design af mekatroniske systemer 2 · DTU · hold på 8</p>
+<h1>Compost Buddy: intelligent kompostbeholder</h1>
+<p class="lead">En kompostbeholder til folk i lejligheder, der overvåger sin egen temperatur, fugtighed og pH, rører selv og tilsætter vand efter behov.</p>
+</div>
+<dl class="spec"><div><dt>Sammenhæng</dt><dd>Kursus 41029, DTU</dd></div><div><dt>Hold</dt><dd>8 personer</dd></div><div><dt>Min rolle</dt><dd>Elektronik, omrøringsmekanisme, vandhåndtering, CAD, stykliste</dd></div><div><dt>Værktøjer</dt><dd>ESP32, Arduino, Node-RED, MQTT, CAD</dd></div></dl>
+</header>
+<dl class="numbers"><div><dt>4 L</dt><dd>inderbeholder</dd></div><div><dt>1,5 L</dt><dd>vandtank</dd></div><div><dt>3</dt><dd>delsystemer: omrøring, sensorløft, vanding</dd></div></dl>
+<section class="section">
+<h2 class="label">Hvad vi byggede</h2>
+<div class="split">
+<div class="prose">
+<p>Compost Buddy er en kompakt kompostbeholder til folk i lejligheder. Den måler forholdene i komposten, rører den og tilsætter vand efter behov; brugeren følger med på et dashboard.</p>
+<ul><li>En udtagelig inderbeholder på 4 L og en vandtank på 1,5 L.</li><li>En omrøringsarm på en 12 V DC-gearmotor, drevet gennem en L298N H-bro. En INA219-strømsensor registrerer, når motoren blokeres, og armen skifter retning.</li><li>En saksemekanisme på en stepmotor (DRV8825-driver, endestop) sænker jordsensoren ned i komposten og løfter den fri, før armen drejer.</li><li>Jordsensoren sender temperatur, fugtighed og pH via RS485. Vand tilsættes med en membranpumpe på et transistorbaseret holdekredsløb.</li><li>En ESP32 sender målingerne via MQTT til et Node-RED-dashboard, der advarer brugeren, når en værdi overskrider en grænse.</li><li>Reguleringsregler fra litteraturen: hold fugtigheden omkring 40–60 %, og tilsæt vand, hvis pH falder under 6.</li></ul>
+</div>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Rendering af en grøn cylindrisk kompostbeholder med løftet låg." class="img" href="../../assets/img/compost/render.webp"><img alt="Rendering af en grøn cylindrisk kompostbeholder med løftet låg." decoding="async" height="972" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/compost/render.webp" srcset="../../assets/img/compost/render-sm.webp 720w, ../../assets/img/compost/render.webp 1144w" width="1144"/></a><figcaption><b>FIG. 01</b> Produktrendering. <span class="who">Hold</span></figcaption></figure>
+</div>
+</section>
+<section class="section">
+<h2 class="label">Min del</h2>
+<div class="mypart">
+<span class="eyebrow">Hvad jeg lavede på holdet</span>
+<p>Vi førte enheden fra opgavebeskrivelse til en prototype med fuld systemintegration i sprints efter V-modellen.</p>
+<ul><li>Valg af elektronik og sensorer.</li><li>Den motoriserede omrøringsmekanisme med tilhørende saksemekanisme og fastgørelse.</li><li>Måling af vandstand og vandhåndtering.</li><li>CAD-modellen og styklisten.</li></ul>
+</div>
+</section>
+<section class="section">
+<h2 class="label">Resultater og begrænsninger</h2>
+<div class="split">
+<div class="prose">
+<p>Betaprototypen fungerede som et selvstændigt system, der måler og vender kompost. Vi testede den med savsmuld og kaffegrums, ikke rigtig kompost.</p>
+<p>Undervejs mistede vi en strømforsyning og en Arduino og måtte løse kommunikationsproblemer mellem komponenterne. En peristaltisk pumpe fungerede ikke med vores slanger, så vi skiftede til en membranpumpe. Efter designgennemgangen gjorde vi inderbeholderen og omrøringsarmen aftagelige af hensyn til rengøring. Den færdige enhed blev større end planlagt på grund af de mekaniske deles størrelse.</p>
+</div>
+<div class="plates">
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Gennemsigtig beholder med en omrøringsarm i en blanding af savsmuld og kaffegrums." class="img" href="../../assets/img/compost/beta-prototype.webp"><img alt="Gennemsigtig beholder med en omrøringsarm i en blanding af savsmuld og kaffegrums." decoding="async" height="309" loading="lazy" src="../../assets/img/compost/beta-prototype.webp" width="260"/></a><figcaption><b>FIG. 02</b> Test af betaprototypen med savsmuld og kaffegrums. <span class="who">Hold</span></figcaption></figure>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Hånd, der holder en sort printet saksemekanisme med en sensorprobe monteret." class="img" href="../../assets/img/compost/scissor-mechanism.webp"><img alt="Hånd, der holder en sort printet saksemekanisme med en sensorprobe monteret." decoding="async" height="334" loading="lazy" src="../../assets/img/compost/scissor-mechanism.webp" width="255"/></a><figcaption><b>FIG. 03</b> Saksemekanisme, der bærer jordsensoren. <span class="who">Hold</span></figcaption></figure>
+</div>
+</div>
+<div class="plates" style="margin-top:20px">
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Test på testbænk af en DC-gearmotor forbundet til en motordriver og en Arduino." class="img" href="../../assets/img/compost/motor-driver-test.webp"><img alt="Test på testbænk af en DC-gearmotor forbundet til en motordriver og en Arduino." decoding="async" height="223" loading="lazy" src="../../assets/img/compost/motor-driver-test.webp" width="378"/></a><figcaption><b>FIG. 04</b> Test på testbænk af omrøringsmotor og H-bro. <span class="who">Hold</span></figcaption></figure>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Stepmotor med en gevindspindel forbundet til et breadboard." class="img" href="../../assets/img/compost/stepper-bench.webp"><img alt="Stepmotor med en gevindspindel forbundet til et breadboard." decoding="async" height="211" loading="lazy" src="../../assets/img/compost/stepper-bench.webp" width="306"/></a><figcaption><b>FIG. 05</b> Test på testbænk af stepmotor og endestop. <span class="who">Hold</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Kredsløbsdiagram for DC-motoren med H-bro, strømsensor og Arduino." class="img" href="../../assets/img/compost/motor-schematic.webp"><img alt="Kredsløbsdiagram for DC-motoren med H-bro, strømsensor og Arduino." decoding="async" height="472" loading="lazy" src="../../assets/img/compost/motor-schematic.webp" width="568"/></a><figcaption><b>FIG. 06</b> Omrøringsmotorens kredsløb. <span class="who">Hold</span></figcaption></figure>
+<figure class="plate"><a aria-label="Åbn billede i fuld størrelse: Blå printet inderbeholder monteret i en papmodel af kabinettet." class="img" href="../../assets/img/compost/inner-container.webp"><img alt="Blå printet inderbeholder monteret i en papmodel af kabinettet." decoding="async" height="323" loading="lazy" src="../../assets/img/compost/inner-container.webp" width="283"/></a><figcaption><b>FIG. 07</b> Inderbeholder i modellen af kabinettet. <span class="who">Hold</span></figcaption></figure>
+<figure class="plate white"><a aria-label="Åbn billede i fuld størrelse: Node-RED-flow med MQTT-input, funktionsnoder og dashboard-output." class="img" href="../../assets/img/compost/node-red.webp"><img alt="Node-RED-flow med MQTT-input, funktionsnoder og dashboard-output." decoding="async" height="207" loading="lazy" sizes="(max-width: 700px) 100vw, 360px" src="../../assets/img/compost/node-red.webp" srcset="../../assets/img/compost/node-red-sm.webp 720w, ../../assets/img/compost/node-red.webp 1004w" width="1004"/></a><figcaption><b>FIG. 08</b> Node-RED-flowet bag dashboardet. <span class="who">Hold</span></figcaption></figure>
+</div>
+</section>
+<aside aria-label="Kontakt" class="sheet-contact"><span class="k">Spørgsmål til projektet?</span><a href="mailto:ahmadm226@gmail.com">ahmadm226@gmail.com</a><a href="https://www.linkedin.com/in/ahmad-mohammad-ab4880295/" rel="noopener">LinkedIn</a></aside>
+<nav aria-label="Andre ark" class="pager"><a href="cobod.html"><span>← Ark 02</span>Praktik hos COBOD</a><a class="next" href="foosball-robot.html"><span>Ark 04 →</span>Bordfodboldrobot</a></nav>
+<footer aria-label="Arkoplysninger" class="titleblock">
+<div><span>Titel</span><b>Compost Buddy: intelligent kompostbeholder</b></div>
+<div><span>Tegnet af</span><b>A. Mohammad</b></div>
+<div><span>Ark</span><b>03 af 08</b></div>
+<div><span>Målestok</span><b>NTS</b></div>
+<div><span>Rev</span><b>A</b></div>
+</footer>
+</main>
+<script defer="" src="../../assets/js/site.js"></script>
+</body>
+</html>
